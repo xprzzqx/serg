@@ -7,13 +7,13 @@
   <meta name="description" content="Шість дерев’яних будиночків у смерековому лісі біля Яремче. Чан на дровах, гори та тиша за 3,5 години від Львова. Концепт-проєкт.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Unbounded:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Unbounded:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 30'%3E%3Cpath fill='%2312261f' d='M11 0l7 9h-3l6 9h-4l5 8h-9.5v4h-3v-4H0l5-8H1l6-9H4z'/%3E%3C/svg%3E">
 </head>
 <body>
 
-<!-- Спільні графічні елементи: силует смереки -->
+<!-- Спільні графічні елементи -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
     <symbol id="spruce" viewBox="0 0 40 120">
@@ -27,127 +27,185 @@
       <use href="#spruce" x="2" y="6" width="10" height="30" fill="#6c877f"/>
       <use href="#spruce" x="15" y="18" width="8" height="24" fill="#728c84"/>
     </pattern>
+    <pattern id="treeline" width="240" height="96" patternUnits="userSpaceOnUse">
+      <g fill="#12261f">
+        <use href="#spruce" x="0" y="30" width="22" height="66"/>
+        <use href="#spruce" x="17" y="50" width="16" height="46"/>
+        <use href="#spruce" x="30" y="12" width="28" height="84"/>
+        <use href="#spruce" x="55" y="42" width="19" height="54"/>
+        <use href="#spruce" x="70" y="26" width="24" height="70"/>
+        <use href="#spruce" x="90" y="56" width="13" height="40"/>
+        <use href="#spruce" x="100" y="36" width="20" height="60"/>
+        <use href="#spruce" x="117" y="48" width="16" height="48"/>
+        <use href="#spruce" x="130" y="20" width="26" height="76"/>
+        <use href="#spruce" x="152" y="44" width="18" height="52"/>
+        <use href="#spruce" x="166" y="4" width="31" height="92"/>
+        <use href="#spruce" x="193" y="52" width="15" height="44"/>
+        <use href="#spruce" x="204" y="32" width="22" height="64"/>
+        <use href="#spruce" x="222" y="46" width="18" height="50"/>
+        <rect y="82" width="240" height="14"/>
+      </g>
+    </pattern>
+    <filter id="fog" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+    <radialGradient id="sunglow">
+      <stop offset="0" stop-color="#f8c47e" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#f8c47e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="windowglow">
+      <stop offset="0" stop-color="#ffc074" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#ffc074" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 </svg>
 
-<header class="wrap nav">
-  <a class="logo" href="#top" aria-label="Хвоя, на головну">
-    <svg aria-hidden="true"><use href="#logo-mark"/></svg>
-    ХВОЯ
-  </a>
-  <nav aria-label="Розділи сайту">
-    <ul>
-      <li><a href="#cabins">Будиночки</a></li>
-      <li><a href="#seasons">Сезони</a></li>
-      <li><a href="#chan">Чан</a></li>
-      <li><a href="#route">Дорога</a></li>
-      <li><a href="#reviews">Відгуки</a></li>
-      <li><a href="#faq">Питання</a></li>
-    </ul>
-  </nav>
-  <a class="btn" href="#booking">Забронювати</a>
-</header>
-
-<main id="top">
-
-  <!-- ===== Герой ===== -->
-  <section class="wrap" aria-labelledby="hero-title">
-    <div class="hero">
-      <svg class="hero__art" viewBox="0 0 1440 780" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#c6d5d4"/>
-            <stop offset=".66" stop-color="#e9dcc2"/>
-            <stop offset="1" stop-color="#f2cf9f"/>
-          </linearGradient>
-        </defs>
-        <rect width="1440" height="780" fill="url(#sky)"/>
-        <g transform="translate(0 100)">
-        <circle cx="1060" cy="350" r="50" fill="#f2a65a"/>
-        <!-- дальній хребет -->
-        <path d="M0 392Q170 312 340 352T680 318T1020 336T1360 300T1700 330V680H0Z" fill="#a9bab6"/>
-        <!-- середній хребет зі смереками -->
-        <path d="M0 452Q220 372 440 420T880 392T1320 410T1760 386V680H0Z" fill="url(#ridge-trees)"/>
-        <!-- туман у долині -->
-        <rect y="440" width="1440" height="46" fill="#eef1ea" opacity=".55"/>
-        <rect y="472" width="1440" height="22" fill="#eef1ea" opacity=".35"/>
-        <!-- ближній схил ліворуч -->
-        <path d="M0 524Q180 452 380 482T720 544V680H0Z" fill="#2a473c"/>
+<!-- ===== Герой ===== -->
+<header class="hero" id="top">
+  <svg class="hero__art" viewBox="0 0 1440 1050" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#bccdd0"/>
+        <stop offset=".5" stop-color="#dcdcc9"/>
+        <stop offset=".72" stop-color="#f0d4a8"/>
+        <stop offset="1" stop-color="#f4c58f"/>
+      </linearGradient>
+    </defs>
+    <rect width="1440" height="1050" fill="url(#sky)"/>
+    <g transform="translate(0 150)">
+      <g data-depth=".22">
+        <circle cx="760" cy="500" r="260" fill="url(#sunglow)"/>
+        <circle cx="760" cy="500" r="56" fill="#f3a55b"/>
+        <path d="M1080 330q6-6 12 0q6-6 12 0M1120 306q5-5 10 0q5-5 10 0" fill="none" stroke="#2e4a3c" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      <g data-depth=".16">
+        <path d="M0 520Q180 440 360 480T720 452T1080 470T1440 430V900H0Z" fill="#b7c4c0"/>
+      </g>
+      <g data-depth=".11">
+        <path d="M0 566Q200 492 420 532T860 502T1300 532T1740 492V900H0Z" fill="#9db0aa"/>
+        <ellipse cx="380" cy="566" rx="440" ry="26" fill="#f2f3ec" opacity=".75" filter="url(#fog)"/>
+        <ellipse cx="1120" cy="580" rx="400" ry="22" fill="#f2f3ec" opacity=".7" filter="url(#fog)"/>
+      </g>
+      <g data-depth=".07">
+        <path d="M0 616Q240 546 480 596T960 576T1440 596V900H0Z" fill="url(#ridge-trees)"/>
+        <ellipse cx="760" cy="648" rx="560" ry="26" fill="#f2f3ec" opacity=".6" filter="url(#fog)"/>
+      </g>
+      <g data-depth=".03">
+        <path d="M380 900Q620 694 900 680T1440 646V900Z" fill="#3f5f4d"/>
+        <circle cx="860" cy="670" r="46" fill="url(#windowglow)"/>
+        <rect x="884" y="618" width="6" height="22" fill="#2b1f19"/>
+        <path d="M887 614c-10-18 12-28 0-48c-10-17 10-26 4-44" fill="none" stroke="#eef0ea" stroke-width="7" stroke-linecap="round" opacity=".55" filter="url(#soft)"/>
+        <polygon points="816,688 860,612 904,688" fill="#3b2a22"/>
+        <polygon points="847,680 860,654 873,680" fill="#ffc074"/>
+        <ellipse cx="944" cy="688" rx="20" ry="6" fill="#2b1f19"/>
+        <path d="M938 678c-5-9 5-12 0-21M950 678c-5-9 5-12 0-21" fill="none" stroke="#eef0ea" stroke-width="3" stroke-linecap="round" opacity=".7"/>
         <g fill="#1b352d">
-          <use href="#spruce" x="10" y="372" width="50" height="150"/>
-          <use href="#spruce" x="62" y="400" width="40" height="120"/>
-          <use href="#spruce" x="104" y="340" width="56" height="168"/>
-          <use href="#spruce" x="168" y="380" width="42" height="126"/>
-          <use href="#spruce" x="214" y="350" width="50" height="150"/>
-          <use href="#spruce" x="270" y="392" width="38" height="114"/>
-          <use href="#spruce" x="316" y="372" width="44" height="132"/>
-          <use href="#spruce" x="372" y="410" width="34" height="102"/>
-          <use href="#spruce" x="420" y="428" width="30" height="90"/>
-          <use href="#spruce" x="470" y="446" width="28" height="84"/>
-          <use href="#spruce" x="520" y="462" width="24" height="72"/>
-          <use href="#spruce" x="566" y="478" width="22" height="66"/>
+          <use href="#spruce" x="1000" y="580" width="34" height="102"/>
+          <use href="#spruce" x="1040" y="546" width="44" height="132"/>
+          <use href="#spruce" x="1180" y="500" width="56" height="168"/>
+          <use href="#spruce" x="1232" y="532" width="46" height="138"/>
+          <use href="#spruce" x="1280" y="470" width="66" height="198"/>
+          <use href="#spruce" x="1340" y="504" width="52" height="156"/>
+          <use href="#spruce" x="1392" y="470" width="62" height="186"/>
         </g>
-        <!-- полонина з будиночком праворуч -->
-        <path d="M640 680Q820 562 1060 550T1440 522V680Z" fill="#3e5e4a"/>
-        <polygon points="1112,552 1156,478 1200,552" fill="#3b2a22"/>
-        <polygon points="1143,544 1156,520 1169,544" fill="#f7b866"/>
-        <ellipse cx="1232" cy="551" rx="17" ry="6" fill="#3b2a22"/>
-        <g fill="#17302a">
-          <use href="#spruce" x="1000" y="478" width="26" height="78"/>
-          <use href="#spruce" x="1040" y="452" width="34" height="102"/>
-          <use href="#spruce" x="1258" y="384" width="56" height="168"/>
-          <use href="#spruce" x="1306" y="412" width="46" height="138"/>
-          <use href="#spruce" x="1350" y="350" width="66" height="198"/>
-          <use href="#spruce" x="1404" y="394" width="52" height="156"/>
+      </g>
+      <g>
+        <path d="M0 708Q200 616 420 656T760 746V900H0Z" fill="#2a473c"/>
+        <g fill="#16302a">
+          <use href="#spruce" x="-14" y="510" width="66" height="198"/>
+          <use href="#spruce" x="44" y="546" width="50" height="150"/>
+          <use href="#spruce" x="96" y="500" width="60" height="180"/>
+          <use href="#spruce" x="158" y="548" width="46" height="138"/>
+          <use href="#spruce" x="208" y="520" width="52" height="156"/>
+          <use href="#spruce" x="268" y="566" width="40" height="120"/>
+          <use href="#spruce" x="316" y="552" width="42" height="126"/>
+          <use href="#spruce" x="372" y="580" width="34" height="102"/>
+          <use href="#spruce" x="424" y="600" width="30" height="90"/>
+          <use href="#spruce" x="474" y="620" width="26" height="78"/>
+          <use href="#spruce" x="522" y="640" width="22" height="66"/>
         </g>
-        <!-- передній план -->
-        <path d="M0 680V626Q360 600 720 620T1440 610V680Z" fill="#12261f"/>
-        </g>
-      </svg>
+        <path d="M0 900V826Q360 796 720 816T1440 806V900Z" fill="#12261f"/>
+      </g>
+    </g>
+  </svg>
 
-      <p class="hero__coords">48°24′ пн. ш.<br>24°36′ сх. д.<br>640 м над рівнем моря</p>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Хвоя, на головну">
+      <svg aria-hidden="true"><use href="#logo-mark"/></svg>
+      ХВОЯ
+    </a>
+    <nav aria-label="Розділи сайту">
+      <ul>
+        <li><a href="#cabins">Будиночки</a></li>
+        <li><a href="#day">Один день</a></li>
+        <li><a href="#seasons">Сезони</a></li>
+        <li><a href="#chan">Чан</a></li>
+        <li><a href="#route">Дорога</a></li>
+        <li><a href="#faq">Питання</a></li>
+      </ul>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn" href="#booking">Забронювати</a>
+      <button class="burger" type="button" aria-label="Відкрити меню">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 14h14"/></svg>
+      </button>
+    </div>
+  </div>
 
-      <div class="hero__copy">
-        <h1 id="hero-title">Ліс, гори й тиша <em>за 3,5 години</em> від Львова</h1>
-        <p>Шість дерев’яних будиночків у смерековому лісі біля Яремче. У кожного своя тераса з видом на гори, до сусідів 80 метрів.</p>
+  <div class="wrap hero__copy">
+    <p class="hero__place"><span>Микуличин, Карпати</span><span>640 м над рівнем моря</span></p>
+    <h1>Ліс, гори й тиша <em>за 3,5 години</em> від Львова</h1>
+    <div class="hero__row">
+      <p>Шість дерев’яних будиночків у смерековому лісі біля Яремче. У кожного своя тераса з видом на гори, до сусідів 80 метрів.</p>
+      <div class="hero__cta">
+        <a class="btn" href="#cabins">Обрати будиночок</a>
+        <a class="btn btn--ghost" href="#route">Як доїхати</a>
       </div>
     </div>
+  </div>
+</header>
 
-    <form class="booking" id="booking" aria-label="Перевірка вільних дат" onsubmit="return false">
-      <div class="field">
-        <label for="date-in">Заїзд</label>
-        <input id="date-in" type="text" value="12 липня">
-      </div>
-      <div class="field">
-        <label for="date-out">Виїзд</label>
-        <input id="date-out" type="text" value="15 липня">
-      </div>
-      <div class="field">
-        <label for="guests">Гості</label>
-        <select id="guests">
-          <option>2 дорослих</option>
-          <option>2 дорослих, 1 дитина</option>
-          <option>4 дорослих</option>
-          <option>6 гостей</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="cabin">Будиночок</label>
-        <select id="cabin">
-          <option>Будь-який</option>
-          <option>«Чорниця»</option>
-          <option>«Брусниця»</option>
-          <option>«Смерекова хата»</option>
-        </select>
-      </div>
-      <button class="btn" type="submit">Перевірити дати</button>
-    </form>
+<main>
+  <section class="wrap" aria-label="Бронювання та коротко про місце">
+    <div class="booking-wrap">
+      <form class="booking" id="booking" aria-label="Перевірка вільних дат" onsubmit="return false">
+        <div class="field">
+          <label for="date-in">Заїзд</label>
+          <input id="date-in" type="text" value="Пт, 24 жовтня">
+        </div>
+        <div class="field">
+          <label for="date-out">Виїзд</label>
+          <input id="date-out" type="text" value="Нд, 26 жовтня">
+        </div>
+        <div class="field">
+          <label for="guests">Гості</label>
+          <select id="guests">
+            <option>2 дорослих</option>
+            <option>2 дорослих, 1 дитина</option>
+            <option>4 дорослих</option>
+            <option>6 гостей</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cabin">Будиночок</label>
+          <select id="cabin">
+            <option>Будь-який</option>
+            <option>«Чорниця»</option>
+            <option>«Брусниця»</option>
+            <option>«Смерекова хата»</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">
+          Перевірити дати
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+        </button>
+      </form>
+    </div>
 
     <ul class="facts" aria-label="Коротко про місце">
       <li><b>6</b><span>будиночків на 4 га смерекового лісу</span></li>
-      <li><b>80 м</b><span>до найближчих сусідів</span></li>
-      <li><b>15 хв</b><span>машиною до Яремче і водоспаду Пробій</span></li>
-      <li><b>45 хв</b><span>до підйомників Буковеля</span></li>
+      <li><b>80<small>м</small></b><span>до найближчих сусідів</span></li>
+      <li><b>15<small>хв</small></b><span>машиною до Яремче і водоспаду Пробій</span></li>
+      <li><b>45<small>хв</small></b><span>до підйомників Буковеля</span></li>
     </ul>
   </section>
 
@@ -162,26 +220,29 @@
 
       <div class="cabins">
         <article class="cabin">
-          <svg class="cabin__art" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <rect width="500" height="300" fill="#dce5e1"/>
-            <path d="M0 150Q120 96 250 128T500 110V300H0Z" fill="#afc0ba"/>
-            <rect y="160" width="500" height="34" fill="#f2f4ef" opacity=".7"/>
-            <path d="M0 224Q160 196 300 210T500 200V300H0Z" fill="#4c6b57"/>
-            <polygon points="206,250 252,170 298,250" fill="#3b2a22"/>
-            <polygon points="236,244 252,214 268,244" fill="#f7b866"/>
-            <g fill="#2a473c">
-              <use href="#spruce" x="60" y="120" width="44" height="132"/>
-              <use href="#spruce" x="110" y="150" width="34" height="102"/>
-              <use href="#spruce" x="360" y="110" width="50" height="150"/>
-              <use href="#spruce" x="412" y="146" width="36" height="108"/>
-            </g>
-            <rect y="250" width="500" height="50" fill="#3c5a47"/>
-          </svg>
+          <div class="cabin__media">
+            <svg class="cabin__art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="300" fill="#d7e0dc"/>
+              <path d="M0 140Q100 90 200 120T400 100V300H0Z" fill="#b2c2bc"/>
+              <path d="M0 176Q120 136 240 160T400 150V300H0Z" fill="url(#ridge-trees)"/>
+              <ellipse cx="200" cy="178" rx="230" ry="18" fill="#f2f4ef" opacity=".8" filter="url(#fog)"/>
+              <path d="M0 232Q140 204 260 218T400 210V300H0Z" fill="#4c6b57"/>
+              <circle cx="200" cy="236" r="40" fill="url(#windowglow)"/>
+              <polygon points="160,256 200,186 240,256" fill="#3b2a22"/>
+              <polygon points="186,250 200,222 214,250" fill="#ffc074"/>
+              <g fill="#2a473c">
+                <use href="#spruce" x="30" y="140" width="42" height="126"/>
+                <use href="#spruce" x="78" y="170" width="32" height="96"/>
+                <use href="#spruce" x="290" y="124" width="48" height="144"/>
+                <use href="#spruce" x="340" y="160" width="36" height="108"/>
+              </g>
+              <rect y="256" width="400" height="44" fill="#3c5a47"/>
+            </svg>
+            <span class="cabin__badge"><i></i>Вільно з 24 жовтня</span>
+          </div>
           <div class="cabin__body">
-            <div class="cabin__top">
-              <h3>«Чорниця»</h3>
-              <span class="cabin__meta">28 м² · 2 гостей</span>
-            </div>
+            <span class="cabin__meta">28 м² · 2 гостей · 2 будиночки</span>
+            <h3>«Чорниця»</h3>
             <p>A-frame для двох. Панорамне вікно на гори, камін і ліжко на антресолі.</p>
             <ul>
               <li>Камін</li>
@@ -190,34 +251,37 @@
             </ul>
             <div class="cabin__price">
               <b>2 900 ₴ <small>/ ніч</small></b>
-              <a href="#booking">Обрати дати</a>
+              <a class="btn" href="#booking">Обрати</a>
             </div>
           </div>
         </article>
 
         <article class="cabin">
-          <svg class="cabin__art" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <rect width="500" height="300" fill="#f1c99c"/>
-            <circle cx="380" cy="118" r="34" fill="#ea8f45"/>
-            <path d="M0 140Q140 80 280 124T500 104V300H0Z" fill="#8a9c8c"/>
-            <path d="M0 214Q180 176 330 196T500 186V300H0Z" fill="#45644f"/>
-            <rect x="180" y="190" width="132" height="62" fill="#4a3426"/>
-            <polygon points="168,194 246,144 324,194" fill="#2f2119"/>
-            <rect x="198" y="208" width="26" height="30" fill="#f7b866"/>
-            <rect x="268" y="208" width="26" height="30" fill="#f7b866"/>
-            <rect x="160" y="250" width="172" height="8" fill="#2f2119"/>
-            <g fill="#2a473c">
-              <use href="#spruce" x="40" y="126" width="46" height="138"/>
-              <use href="#spruce" x="96" y="160" width="32" height="96"/>
-              <use href="#spruce" x="400" y="130" width="44" height="132"/>
-            </g>
-            <rect y="256" width="500" height="44" fill="#3c5a47"/>
-          </svg>
+          <div class="cabin__media">
+            <svg class="cabin__art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="300" fill="#f1caa0"/>
+              <circle cx="300" cy="128" r="90" fill="url(#sunglow)"/>
+              <circle cx="300" cy="128" r="30" fill="#ea8f45"/>
+              <path d="M0 140Q120 84 230 122T400 104V300H0Z" fill="#a49a8c"/>
+              <path d="M0 214Q150 176 280 196T400 186V300H0Z" fill="#45644f"/>
+              <circle cx="190" cy="226" r="56" fill="url(#windowglow)"/>
+              <rect x="130" y="196" width="122" height="58" fill="#4a3426"/>
+              <polygon points="118,200 191,152 264,200" fill="#2f2119"/>
+              <rect x="146" y="212" width="24" height="28" fill="#ffc074"/>
+              <rect x="212" y="212" width="24" height="28" fill="#ffc074"/>
+              <rect x="112" y="252" width="160" height="7" fill="#2f2119"/>
+              <g fill="#2a473c">
+                <use href="#spruce" x="20" y="130" width="44" height="132"/>
+                <use href="#spruce" x="68" y="164" width="30" height="90"/>
+                <use href="#spruce" x="320" y="134" width="42" height="126"/>
+              </g>
+              <rect y="258" width="400" height="42" fill="#3c5a47"/>
+            </svg>
+            <span class="cabin__badge"><i></i>Вільно з 31 жовтня</span>
+          </div>
           <div class="cabin__body">
-            <div class="cabin__top">
-              <h3>«Брусниця»</h3>
-              <span class="cabin__meta">46 м² · до 4 гостей</span>
-            </div>
+            <span class="cabin__meta">46 м² · до 4 гостей · 3 будиночки</span>
+            <h3>«Брусниця»</h3>
             <p>Дві спальні, кухня та тераса над гірським потічком.</p>
             <ul>
               <li>Кухня</li>
@@ -226,39 +290,41 @@
             </ul>
             <div class="cabin__price">
               <b>4 300 ₴ <small>/ ніч</small></b>
-              <a href="#booking">Обрати дати</a>
+              <a class="btn" href="#booking">Обрати</a>
             </div>
           </div>
         </article>
 
         <article class="cabin">
-          <svg class="cabin__art" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <rect width="500" height="300" fill="#1d3340"/>
-            <circle cx="404" cy="70" r="20" fill="#f3e7c8"/>
-            <g fill="#f3e7c8">
-              <circle cx="70" cy="50" r="1.6"/><circle cx="150" cy="84" r="1.2"/><circle cx="232" cy="40" r="1.6"/>
-              <circle cx="300" cy="96" r="1.2"/><circle cx="460" cy="130" r="1.4"/><circle cx="34" cy="120" r="1.2"/>
-            </g>
-            <path d="M0 160Q140 104 270 140T500 120V300H0Z" fill="#2c4652"/>
-            <path d="M0 226Q170 198 320 214T500 206V300H0Z" fill="#e4ecef"/>
-            <rect x="150" y="182" width="170" height="70" fill="#4a3426"/>
-            <polygon points="136,188 235,128 334,188" fill="#e4ecef"/>
-            <polygon points="146,188 235,136 324,188" fill="#2f2119"/>
-            <rect x="170" y="200" width="28" height="32" fill="#f7b866"/>
-            <rect x="222" y="200" width="28" height="32" fill="#f7b866"/>
-            <rect x="274" y="200" width="28" height="32" fill="#f7b866"/>
-            <ellipse cx="386" cy="250" rx="30" ry="9" fill="#2f2119"/>
-            <path d="M376 236c-6-10 6-14 0-24M392 236c-6-10 6-14 0-24" fill="none" stroke="#c9d6dc" stroke-width="3" stroke-linecap="round"/>
-            <g fill="#16302b">
-              <use href="#spruce" x="40" y="130" width="46" height="138"/>
-              <use href="#spruce" x="432" y="150" width="40" height="120"/>
-            </g>
-          </svg>
+          <div class="cabin__media">
+            <svg class="cabin__art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="300" fill="#1d3340"/>
+              <circle cx="320" cy="70" r="18" fill="#f3e7c8"/>
+              <g fill="#f3e7c8">
+                <circle cx="50" cy="44" r="1.6"/><circle cx="120" cy="84" r="1.2"/><circle cx="190" cy="36" r="1.6"/>
+                <circle cx="250" cy="96" r="1.2"/><circle cx="380" cy="130" r="1.4"/><circle cx="24" cy="120" r="1.2"/>
+              </g>
+              <path d="M0 160Q110 104 220 140T400 120V300H0Z" fill="#2c4652"/>
+              <path d="M0 226Q140 198 260 214T400 206V300H0Z" fill="#e4ecef"/>
+              <circle cx="190" cy="220" r="70" fill="url(#windowglow)"/>
+              <rect x="110" y="184" width="160" height="68" fill="#4a3426"/>
+              <polygon points="96,190 190,130 284,190" fill="#e4ecef"/>
+              <polygon points="106,190 190,138 274,190" fill="#2f2119"/>
+              <rect x="128" y="202" width="26" height="30" fill="#ffc074"/>
+              <rect x="177" y="202" width="26" height="30" fill="#ffc074"/>
+              <rect x="226" y="202" width="26" height="30" fill="#ffc074"/>
+              <ellipse cx="320" cy="252" rx="28" ry="8" fill="#2f2119"/>
+              <path d="M310 240c-6-10 6-14 0-24M326 240c-6-10 6-14 0-24" fill="none" stroke="#c9d6dc" stroke-width="3" stroke-linecap="round"/>
+              <g fill="#16302b">
+                <use href="#spruce" x="18" y="130" width="46" height="138"/>
+                <use href="#spruce" x="356" y="150" width="40" height="120"/>
+              </g>
+            </svg>
+            <span class="cabin__badge"><i></i>Вільно з 7 листопада</span>
+          </div>
           <div class="cabin__body">
-            <div class="cabin__top">
-              <h3>«Смерекова хата»</h3>
-              <span class="cabin__meta">84 м² · до 6 гостей</span>
-            </div>
+            <span class="cabin__meta">84 м² · до 6 гостей · 1 будинок</span>
+            <h3>«Смерекова хата»</h3>
             <p>Три спальні, власний чан на дровах і окремий вхід з лісу.</p>
             <ul>
               <li>Власний чан</li>
@@ -267,7 +333,7 @@
             </ul>
             <div class="cabin__price">
               <b>7 600 ₴ <small>/ ніч</small></b>
-              <a href="#booking">Обрати дати</a>
+              <a class="btn" href="#booking">Обрати</a>
             </div>
           </div>
         </article>
@@ -275,59 +341,99 @@
     </div>
   </section>
 
-  <!-- ===== Сезони ===== -->
-  <section class="section section--dark" id="seasons" aria-labelledby="seasons-title">
+  <!-- ===== Один день + сезони ===== -->
+  <svg class="treeline" viewBox="0 0 1440 96" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <rect width="1440" height="96" fill="url(#treeline)"/>
+  </svg>
+  <section class="section section--dark" id="day" aria-labelledby="day-title" style="padding-top:clamp(56px, 7vw, 96px)">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Коли їхати</p>
-        <h2 class="h2" id="seasons-title">У Карпатах немає несезону</h2>
-        <p class="lead">Що робити біля «Хвої» в різні місяці. Маршрути, інструкторів і прокат підкажемо на місці.</p>
+        <p class="eyebrow">Один день у Хвої</p>
+        <h2 class="h2" id="day-title">Від туману в долині до зір над смереками</h2>
+        <p class="lead">Так виглядає звичайна субота наших гостей. Нічого з цього не обов’язково.</p>
+      </div>
+
+      <div class="day">
+        <article class="moment moment--dawn">
+          <svg viewBox="0 0 100 40" aria-hidden="true"><path d="M6 36Q50-8 94 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3" opacity=".5"/><path d="M0 36.5h100" stroke="currentColor" stroke-width="1" opacity=".5"/><circle cx="10.4" cy="31.8" r="4" fill="#e9873b"/></svg>
+          <time>07:30</time>
+          <p><b>Туман у долині</b>Кава на терасі, поки ліс прокидається.</p>
+        </article>
+        <article class="moment moment--morning">
+          <svg viewBox="0 0 100 40" aria-hidden="true"><path d="M6 36Q50-8 94 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3" opacity=".5"/><path d="M0 36.5h100" stroke="currentColor" stroke-width="1" opacity=".5"/><circle cx="28" cy="19.5" r="4" fill="#e9873b"/></svg>
+          <time>09:30</time>
+          <p><b>Сніданок</b>Бринза, банош і мед від сусідки пані Марії.</p>
+        </article>
+        <article class="moment moment--noon">
+          <svg viewBox="0 0 100 40" aria-hidden="true"><path d="M6 36Q50-8 94 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3" opacity=".5"/><path d="M0 36.5h100" stroke="currentColor" stroke-width="1" opacity=".5"/><circle cx="50" cy="14" r="4" fill="#e9873b"/></svg>
+          <time>12:00</time>
+          <p><b>Стежка</b>Водоспад Пробій або підйом на Хом’як.</p>
+        </article>
+        <article class="moment moment--afternoon">
+          <svg viewBox="0 0 100 40" aria-hidden="true"><path d="M6 36Q50-8 94 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3" opacity=".5"/><path d="M0 36.5h100" stroke="currentColor" stroke-width="1" opacity=".5"/><circle cx="69.4" cy="18.3" r="4" fill="#e9873b"/></svg>
+          <time>16:00</time>
+          <p><b>Обід</b>Колиба в Яремче й прогулянка над Прутом.</p>
+        </article>
+        <article class="moment moment--sunset">
+          <svg viewBox="0 0 100 40" aria-hidden="true"><path d="M6 36Q50-8 94 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3" opacity=".5"/><path d="M0 36.5h100" stroke="currentColor" stroke-width="1" opacity=".5"/><circle cx="87" cy="29.5" r="4" fill="#12261f"/></svg>
+          <time>19:30</time>
+          <p><b>Чан</b>Трави, підсвітка й гірський потічок поруч.</p>
+        </article>
+        <article class="moment moment--night">
+          <svg viewBox="0 0 100 40" aria-hidden="true"><path d="M6 36Q50-8 94 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3" opacity=".5"/><path d="M0 36.5h100" stroke="currentColor" stroke-width="1" opacity=".5"/><circle cx="50" cy="14" r="4.5" fill="#f3e7c8"/><circle cx="52.4" cy="12.6" r="3.8" fill="#24394a"/><circle cx="20" cy="10" r=".9" fill="#f3e7c8"/><circle cx="78" cy="6" r=".9" fill="#f3e7c8"/><circle cx="88" cy="20" r=".7" fill="#f3e7c8"/></svg>
+          <time>22:30</time>
+          <p><b>Зорі</b>Без засвітки міста. Тиша, яку чути.</p>
+        </article>
+      </div>
+
+      <div class="subhead" id="seasons">
+        <h3>У Карпатах немає несезону</h3>
+        <p class="lead">Маршрути, інструкторів і прокат підкажемо на місці.</p>
       </div>
 
       <div class="season-scroll">
         <div class="season" aria-label="Календар активностей по місяцях">
-          <div style="display:contents">
-            <span></span>
-            <span class="season__month">січ</span>
-            <span class="season__month">лют</span>
-            <span class="season__month">бер</span>
-            <span class="season__month">кві</span>
-            <span class="season__month">тра</span>
-            <span class="season__month">чер</span>
-            <span class="season__month">лип</span>
-            <span class="season__month">сер</span>
-            <span class="season__month">вер</span>
-            <span class="season__month">жов</span>
-            <span class="season__month">лис</span>
-            <span class="season__month">гру</span>
-          </div>
+          <span></span>
+          <span class="season__month">січ</span>
+          <span class="season__month">лют</span>
+          <span class="season__month">бер</span>
+          <span class="season__month">кві</span>
+          <span class="season__month">тра</span>
+          <span class="season__month">чер</span>
+          <span class="season__month">лип</span>
+          <span class="season__month">сер</span>
+          <span class="season__month">вер</span>
+          <span class="season__month">жов</span>
+          <span class="season__month">лис</span>
+          <span class="season__month">гру</span>
+          <span class="season__track" style="grid-row:2"></span>
 
-          <span class="season__label" style="grid-row:2">Рафтинг на Пруті</span>
-          <i class="bar bar--water" style="grid-row:2;grid-column:5/7" title="квітень–травень"></i>
+          <span class="season__label" style="grid-row:3">Рафтинг на Пруті</span>
+          <i class="bar bar--water" style="grid-row:3;grid-column:5/7" title="квітень–травень"></i>
 
-          <span class="season__label" style="grid-row:3">Сходження на Говерлу</span>
-          <i class="bar bar--mount" style="grid-row:3;grid-column:7/11" title="червень–вересень"></i>
+          <span class="season__label" style="grid-row:4">Сходження на Говерлу</span>
+          <i class="bar bar--mount" style="grid-row:4;grid-column:7/11" title="червень–вересень"></i>
 
-          <span class="season__label" style="grid-row:4">Купання в гірській річці</span>
-          <i class="bar bar--water" style="grid-row:4;grid-column:8/10" title="липень–серпень"></i>
+          <span class="season__label" style="grid-row:5">Купання в гірській річці</span>
+          <i class="bar bar--water" style="grid-row:5;grid-column:8/10" title="липень–серпень"></i>
 
-          <span class="season__label" style="grid-row:5">Чорниці та гриби</span>
-          <i class="bar bar--forest" style="grid-row:5;grid-column:8/12" title="липень–жовтень"></i>
+          <span class="season__label" style="grid-row:6">Чорниці та гриби</span>
+          <i class="bar bar--forest" style="grid-row:6;grid-column:8/12" title="липень–жовтень"></i>
 
-          <span class="season__label" style="grid-row:6">Осінні полонини</span>
-          <i class="bar bar--mount" style="grid-row:6;grid-column:10/12" title="вересень–жовтень"></i>
+          <span class="season__label" style="grid-row:7">Осінні полонини</span>
+          <i class="bar bar--mount" style="grid-row:7;grid-column:10/12" title="вересень–жовтень"></i>
 
-          <span class="season__label" style="grid-row:7">Лижі в Буковелі</span>
-          <i class="bar bar--winter" style="grid-row:7;grid-column:2/5" title="січень–березень"></i>
-          <i class="bar bar--winter" style="grid-row:7;grid-column:13/14" title="грудень"></i>
-
-          <span class="season__label" style="grid-row:8">Чан під снігом</span>
+          <span class="season__label" style="grid-row:8">Лижі в Буковелі</span>
           <i class="bar bar--winter" style="grid-row:8;grid-column:2/5" title="січень–березень"></i>
-          <i class="bar bar--winter" style="grid-row:8;grid-column:12/14" title="листопад–грудень"></i>
+          <i class="bar bar--winter" style="grid-row:8;grid-column:13/14" title="грудень"></i>
 
-          <span class="season__label" style="grid-row:9">Різдво й колядування</span>
-          <i class="bar bar--winter" style="grid-row:9;grid-column:2/3" title="січень"></i>
-          <i class="bar bar--winter" style="grid-row:9;grid-column:13/14" title="грудень"></i>
+          <span class="season__label" style="grid-row:9">Чан під снігом</span>
+          <i class="bar bar--winter" style="grid-row:9;grid-column:2/5" title="січень–березень"></i>
+          <i class="bar bar--winter" style="grid-row:9;grid-column:12/14" title="листопад–грудень"></i>
+
+          <span class="season__label" style="grid-row:10">Різдво й колядування</span>
+          <i class="bar bar--winter" style="grid-row:10;grid-column:2/3" title="січень"></i>
+          <i class="bar bar--winter" style="grid-row:10;grid-column:13/14" title="грудень"></i>
         </div>
       </div>
 
@@ -339,6 +445,9 @@
       </ul>
     </div>
   </section>
+  <svg class="hillline" viewBox="0 0 1440 72" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 72V44Q240 4 520 30T1000 22T1440 36V72Z" fill="#e6eae1"/>
+  </svg>
 
   <!-- ===== Чан ===== -->
   <section class="section" id="chan" aria-labelledby="chan-title">
@@ -357,10 +466,23 @@
 
       <div class="temps" aria-label="Температура води">
         <div class="temp temp--hot">
+          <svg class="temp__deco" viewBox="0 0 300 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <path d="M110 150c-14-26 16-40 0-70c-14-26 12-40 4-64M150 150c-14-26 16-40 0-70c-14-26 12-40 4-64M190 150c-14-26 16-40 0-70c-14-26 12-40 4-64" fill="none" stroke="#fff6ee" stroke-width="8" stroke-linecap="round" opacity=".18" filter="url(#soft)"/>
+            <ellipse cx="150" cy="200" rx="120" ry="34" fill="#8e4115"/>
+            <ellipse cx="150" cy="190" rx="104" ry="24" fill="#d97a3a"/>
+            <rect x="30" y="200" width="240" height="60" fill="#8e4115"/>
+          </svg>
           <b>+40<sup>°C</sup></b>
           <span>у чані з травами</span>
         </div>
         <div class="temp temp--cold">
+          <svg class="temp__deco" viewBox="0 0 300 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <path d="M0 170Q80 150 150 168T300 160V260H0Z" fill="#b6cfd6"/>
+            <path d="M0 200Q90 182 170 198T300 192V260H0Z" fill="#9dbcc6"/>
+            <path d="M20 214h40M110 228h60M210 216h50" stroke="#e8f1f3" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="60" cy="176" rx="28" ry="10" fill="#7f9891"/>
+            <ellipse cx="240" cy="184" rx="22" ry="8" fill="#7f9891"/>
+          </svg>
           <b>+8<sup>°C</sup></b>
           <span>у гірському потічку поруч</span>
         </div>
@@ -381,11 +503,18 @@
         <p class="lead">До кожного будиночка веде асфальт, останні 300 метрів гравій. Паркування безкоштовне.</p>
       </div>
 
+      <div class="route-line" aria-label="Маршрут зі Львова">
+        <b>Львів</b><span><em>135 км</em></span>
+        <b>Івано-Франківськ</b><span><em>65 км</em></span>
+        <b>Яремче</b><span><em>10 км</em></span>
+        <b>Хвоя</b>
+      </div>
+
       <div class="routes">
         <article class="route">
           <div class="route__head">
             <h3>Автомобілем</h3>
-            <span class="route__time">≈ 3,5 год зі Львова · ≈ 9 год з Києва</span>
+            <span class="route__time">≈ 3,5 год зі Львова</span>
           </div>
           <ol class="legs">
             <li><b>Львів</b><span class="km">0 км</span><small>Виїжджайте трасою Н-09 у бік Рогатина.</small></li>
@@ -398,10 +527,10 @@
         <article class="route">
           <div class="route__head">
             <h3>Потягом</h3>
-            <span class="route__time">≈ 11 год з Києва · щодня</span>
+            <span class="route__time">≈ 11 год з Києва</span>
           </div>
           <ol class="legs">
-            <li><b>Київ-Пасажирський</b><span class="km">21:40</span><small>Нічний потяг Київ — Рахів, купе або плацкарт.</small></li>
+            <li><b>Київ-Пасажирський</b><span class="km">21:40</span><small>Нічний потяг Київ — Рахів, щодня. Купе або плацкарт.</small></li>
             <li><b>Яремче</b><span class="km">08:50</span><small>Зустрічаємо на пероні з табличкою «Хвоя».</small></li>
             <li><b>Хвоя, Микуличин</b><span class="km">+15 хв</span><small>Трансфер від вокзалу 350 ₴ за машину.</small></li>
           </ol>
@@ -418,24 +547,30 @@
         <h2 class="h2" id="reviews-title">Що пишуть гості після виїзду</h2>
       </div>
       <div class="reviews">
-        <figure class="review">
+        <figure class="review review--main">
+          <svg class="quote-mark" viewBox="0 0 44 34" aria-hidden="true"><path d="M0 34V20C0 8 6 1 18 0v7c-6 1-9 5-9 11h9v16zm26 0V20C26 8 32 1 44 0v7c-6 1-9 5-9 11h9v16z"/></svg>
           <blockquote>Вимкнули телефони на другий день і не помітили. Вранці туман просто у вікні, ввечері чан під зорями. Повернемося взимку.</blockquote>
-          <figcaption><b>Оля і Максим</b>Київ · «Чорниця» · серпень 2026</figcaption>
+          <figcaption><span class="avatar">ОМ</span><span><b>Оля і Максим</b>Київ · «Чорниця» · серпень 2026</span></figcaption>
         </figure>
-        <figure class="review">
-          <blockquote>Їхали з двома дітьми й собакою. Будиночок теплий, усе чисто, господарі підказали маршрут на Хом’як без натовпу.</blockquote>
-          <figcaption><b>Андрій</b>Львів · «Брусниця» · липень 2026</figcaption>
-        </figure>
-        <figure class="review">
-          <blockquote>Світло в селі зникало двічі, а в нас усе працювало: панелі, акумулятори, Starlink. Можна спокійно працювати віддалено.</blockquote>
-          <figcaption><b>Ірина</b>Дніпро · «Смерекова хата» · березень 2026</figcaption>
-        </figure>
+        <div class="reviews__side">
+          <figure class="review">
+            <blockquote>Їхали з двома дітьми й собакою. Будиночок теплий, усе чисто, господарі підказали маршрут на Хом’як без натовпу.</blockquote>
+            <figcaption><span class="avatar">А</span><span><b>Андрій</b>Львів · «Брусниця» · липень 2026</span></figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>Світло в селі зникало двічі, а в нас усе працювало: панелі, акумулятори, Starlink. Можна спокійно працювати віддалено.</blockquote>
+            <figcaption><span class="avatar">І</span><span><b>Ірина</b>Дніпро · «Смерекова хата» · березень 2026</span></figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== Питання та контакти ===== -->
-  <section class="section section--dark" id="faq" aria-labelledby="faq-title">
+  <svg class="treeline" viewBox="0 0 1440 96" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <rect width="1440" height="96" fill="url(#treeline)"/>
+  </svg>
+  <section class="section section--dark" id="faq" aria-labelledby="faq-title" style="padding-top:clamp(56px, 7vw, 96px)">
     <div class="wrap closing">
       <div class="faq">
         <h2 class="h2" id="faq-title">Часті питання</h2>
@@ -458,9 +593,9 @@
       </div>
 
       <div class="contact">
-        <p class="eyebrow">Бронювання</p>
+        <p class="contact__note"><i></i>На зв’язку з 9:00 до 22:00</p>
         <h2 class="h2">Забронюйте будиночок на вихідні</h2>
-        <p class="lead">Відповідаємо протягом години, з 9:00 до 22:00. Передоплата 30% на рахунок ФОП.</p>
+        <p class="lead">Відповідаємо протягом години. Передоплата 30% на рахунок ФОП, решта при заїзді.</p>
         <div class="contact__lines">
           <a href="tel:+380000000000">+380 (00) 000 00 00</a>
           <a href="#faq">@khvoia_karpaty</a>
@@ -475,6 +610,7 @@
 </main>
 
 <footer class="footer">
+  <p class="footer__big" aria-hidden="true">ХВОЯ</p>
   <div class="wrap">
     <a class="logo" href="#top" aria-label="Хвоя, нагору">
       <svg aria-hidden="true"><use href="#logo-mark"/></svg>
@@ -485,5 +621,23 @@
   </div>
 </footer>
 
+<script>
+  // Легкий паралакс шарів пейзажу в герої
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var layers = document.querySelectorAll('.hero__art [data-depth]');
+    var ticking = false;
+    function update() {
+      var y = Math.min(window.scrollY, 1000);
+      layers.forEach(function (el) {
+        el.setAttribute('transform', 'translate(0 ' + (y * parseFloat(el.dataset.depth)).toFixed(1) + ')');
+      });
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+  })();
+</script>
 </body>
 </html>
