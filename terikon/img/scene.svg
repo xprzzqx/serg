@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e0f12"/>
+      <stop offset=".55" stop-color="#1c1a19"/>
+      <stop offset=".78" stop-color="#3a2516"/>
+      <stop offset="1" stop-color="#4a2c14"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#ff8a1e" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ff8a1e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lamp">
+      <stop offset="0" stop-color="#ffb35c" stop-opacity=".9"/>
+      <stop offset=".25" stop-color="#ff8a1e" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ff8a1e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <ellipse cx="1080" cy="640" rx="620" ry="170" fill="url(#glow)"/>
+  <g fill="#c9cdd2" opacity=".5">
+    <circle cx="210" cy="90" r="1.4"/><circle cx="420" cy="160" r="1"/><circle cx="640" cy="70" r="1.2"/>
+    <circle cx="930" cy="130" r="1"/><circle cx="1180" cy="60" r="1.3"/><circle cx="1430" cy="150" r="1"/>
+  </g>
+  <path d="M760 650L960 410H1000L1230 650Z" fill="#1b1b1e"/>
+  <path d="M1130 650L1320 462H1350L1530 650Z" fill="#171719"/>
+  <path d="M1416 640V352h24v288zM1474 640V404h18v236z" fill="#141416"/>
+  <circle cx="1428" cy="350" r="4" fill="#d8321f"/>
+  <circle cx="1483" cy="402" r="3.5" fill="#d8321f"/>
+  <ellipse cx="1500" cy="300" rx="90" ry="34" fill="#3a3530" opacity=".55" filter="url(#blur)"/>
+  <ellipse cx="1420" cy="250" rx="70" ry="28" fill="#3a3530" opacity=".45" filter="url(#blur)"/>
+  <path d="M220 720L560 300H640L1010 720Z" fill="#111113"/>
+  <path d="M640 300L1010 720H930L620 330Z" fill="#ff8a1e" opacity=".12"/>
+  <path d="M470 410H730M410 480H790M352 552H858M296 622H924" stroke="#1d1d21" stroke-width="5"/>
+  <path d="M1060 560H1600M1060 590H1600M1060 560L1090 590L1120 560L1150 590L1180 560L1210 590L1240 560L1270 590L1300 560L1330 590L1360 560L1390 590L1420 560L1450 590L1480 560L1510 590L1540 560L1570 590L1600 560" stroke="#202024" stroke-width="3" fill="none"/>
+  <path d="M0 700H1600V900H0Z" fill="#0b0b0d"/>
+  <path d="M0 760L1600 732" stroke="#2a2016" stroke-width="2"/>
+  <g>
+    <circle cx="160" cy="590" r="120" fill="url(#lamp)"/>
+    <circle cx="560" cy="610" r="110" fill="url(#lamp)"/>
+    <circle cx="1240" cy="600" r="110" fill="url(#lamp)"/>
+    <path d="M160 590V760M560 610V760M1240 600V760" stroke="#1a1a1d" stroke-width="6"/>
+    <path d="M144 588h32v8h-32zM544 608h32v8h-32zM1224 598h32v8h-32z" fill="#ffb35c"/>
+  </g>
+</svg>

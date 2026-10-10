@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кошик — ТЕРИКОН</title>
+  <meta name="description" content="Кошик і оформлення замовлення: Нова Пошта, monobank. Концепт для портфоліо.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/terikon.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 22'%3E%3Cpath d='M1 21 10 3h6l9 18z' fill='%23ff8a1e'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="fundbar">
+  <div class="wrap">
+    <span>10% з кожного дропу — на збори для ЗСУ</span>
+    <a href="index.html#fund">Звіти →</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Терикон, на головну">
+      <svg viewBox="0 0 26 22" aria-hidden="true"><path d="M1 21 10 3h6l9 18z" fill="currentColor"/><path d="M6.6 10h12.8M3.6 16h18.8" stroke="#17181b" stroke-width="2"/></svg>
+      Терикон
+    </a>
+    <nav class="nav" aria-label="Магазин">
+      <a class="hot" href="index.html#drop">Дроп 07</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="index.html#archive">Архів</a>
+      <a href="product.html#sizes">Розміри</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" type="button" aria-label="Пошук">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      </button>
+      <a class="icon-btn" href="cart.html" aria-label="Кошик, 2 речі">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="badge">2</span>
+      </a>
+      <button class="icon-btn burger" type="button" aria-label="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="wrap page-head" aria-labelledby="cart-title">
+    <ol class="crumbs label"><li><a href="index.html">Головна</a></li><li>Кошик</li></ol>
+    <div class="page-head__row">
+      <h1 class="display" id="cart-title">Кошик</h1>
+      <ol class="steps"><li class="on"><b>1</b>Речі</li><li class="on"><b>2</b>Доставка</li><li><b>3</b>Оплата</li></ol>
+    </div>
+  </section>
+
+  <form class="wrap checkout" aria-label="Оформлення замовлення">
+    <div>
+      <section class="block" aria-labelledby="items-title">
+        <h2 class="display" id="items-title">2 речі</h2>
+        <div>
+          <div class="line-item">
+            <div class="line-item__img"><img src="img/hoodie-front.svg" alt="Худі «Нічна зміна»"></div>
+            <div><h3>Худі «Нічна зміна»</h3><p>Шлак · M · ТРК-07-HD</p></div>
+            <div class="line-item__side">
+              <span class="card__price">2 400 ₴</span>
+              <div class="qty" aria-label="Кількість"><button type="button" data-step="-" aria-label="Менше">−</button><output>1</output><button type="button" data-step="+" aria-label="Більше">+</button></div>
+              <button class="remove" type="button">Прибрати</button>
+            </div>
+          </div>
+          <div class="line-item">
+            <div class="line-item__img"><img src="img/cargo.svg" alt="Карго «Відвал»"></div>
+            <div><h3>Карго «Відвал»</h3><p>Шлак · L · ТРК-07-CP</p></div>
+            <div class="line-item__side">
+              <span class="card__price">2 900 ₴</span>
+              <div class="qty" aria-label="Кількість"><button type="button" data-step="-" aria-label="Менше">−</button><output>1</output><button type="button" data-step="+" aria-label="Більше">+</button></div>
+              <button class="remove" type="button">Прибрати</button>
+            </div>
+          </div>
+        </div>
+        <p class="alert"><i></i>Речі з дропу тримаємо за вами 15 хвилин, поки ви оформлюєте замовлення.</p>
+      </section>
+
+      <section class="block" aria-labelledby="ship-title">
+        <h2 class="display" id="ship-title">Доставка</h2>
+        <p class="np"><i>НП</i>Нова Пошта · відправка наступного дня</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="ship" checked><span><b>У відділення</b><small>1–2 дні</small></span><em>≈ 70 ₴</em></label>
+          <label class="option"><input type="radio" name="ship"><span><b>У поштомат</b><small>1–2 дні, до 30×40×60 см</small></span><em>≈ 60 ₴</em></label>
+          <label class="option"><input type="radio" name="ship"><span><b>Кур’єром</b><small>до дверей, 2 дні</small></span><em>≈ 120 ₴</em></label>
+        </div>
+        <div class="fields">
+          <div class="field"><label for="city">Місто</label><input id="city" type="text" value="Кривий Ріг"></div>
+          <div class="field"><label for="branch">Відділення</label><select id="branch"><option>Відділення №12 (до 30 кг)</option><option>Відділення №3 (вантажне)</option><option>Відділення №27 (до 10 кг)</option></select></div>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="who-title">
+        <h2 class="display" id="who-title">Отримувач</h2>
+        <div class="fields">
+          <div class="field"><label for="fname">Ім’я</label><input id="fname" type="text" value="Олег" autocomplete="given-name"></div>
+          <div class="field"><label for="lname">Прізвище</label><input id="lname" type="text" value="Коваленко" autocomplete="family-name"></div>
+          <div class="field"><label for="phone">Телефон</label><input id="phone" type="tel" value="+380 67 000 00 00" autocomplete="tel"></div>
+          <div class="field"><label for="tgname">Telegram, за бажанням</label><input id="tgname" type="text" placeholder="@нікнейм"></div>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="pay-title">
+        <h2 class="display" id="pay-title">Оплата</h2>
+        <div class="options">
+          <label class="option"><input type="radio" name="pay" checked><span><b>Карткою, Apple Pay або Google Pay</b><small>через monobank, одразу</small></span><em></em></label>
+          <label class="option"><input type="radio" name="pay"><span><b>Частинами від monobank</b><small>4 платежі без переплат</small></span><em>4 × 1 343 ₴</em></label>
+          <label class="option"><input type="radio" name="pay"><span><b>Накладений платіж</b><small>при отриманні у відділенні</small></span><em>+2% і 20 ₴</em></label>
+        </div>
+      </section>
+    </div>
+
+    <aside class="summary" aria-labelledby="sum-title">
+      <h2 class="display" id="sum-title">Разом</h2>
+      <dl>
+        <dt>Речі, 2 шт</dt><dd>5 300 ₴</dd>
+        <dt>Доставка</dt><dd>≈ 70 ₴</dd>
+        <dt>Знижка</dt><dd>—</dd>
+        <dt class="total">До сплати</dt><dd>5 370 ₴</dd>
+      </dl>
+      <div class="promo"><label for="promo" style="position:absolute;left:-9999px">Промокод</label><input id="promo" type="text" placeholder="Промокод"><button type="button">Застосувати</button></div>
+      <p class="give"><span>З цього замовлення <b>530 ₴</b> піде на збір для ЗСУ.</span></p>
+      <button class="btn btn--block" type="submit">Оплатити 5 370 ₴</button>
+      <p class="secure">Оплата через monobank. Дані картки ми не бачимо.</p>
+    </aside>
+  </form>
+</main>
+<footer class="footer">
+  <p class="footer__big" aria-hidden="true">Терикон</p>
+  <div class="wrap">
+    <div class="footer__cols">
+      <div><h3 class="label">Магазин</h3><ul><li><a href="index.html#drop">Дроп 07</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="index.html#archive">Архів</a></li><li><a href="product.html#sizes">Розмірна сітка</a></li></ul></div>
+      <div><h3 class="label">Допомога</h3><ul><li><a href="cart.html">Доставка й оплата</a></li><li><a href="cart.html">Повернення 14 днів</a></li><li><a href="product.html">Догляд за речами</a></li></ul></div>
+      <div><h3 class="label">Контакти</h3><ul><li><a href="index.html#subscribe">Telegram @terykon_store</a></li><li><a href="index.html#subscribe">Instagram @terykon.ua</a></li><li>Шоурум у Кривому Розі, за записом</li></ul></div>
+      <div><h3 class="label">Оплата</h3><ul><li>monobank</li><li>Apple Pay, Google Pay</li><li>Нова Пошта, 1–2 дні</li></ul></div>
+    </div>
+    <div class="label footer__legal">
+      <span>© 2026 Терикон · концепт для портфоліо, бренд вигаданий</span>
+      <span>Дизайн і розробка: [Ваше ім’я]</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/terikon.js"></script>
+</body>
+</html>
