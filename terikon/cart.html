@@ -15,7 +15,7 @@
 
 <div class="fundbar">
   <div class="wrap">
-    <span>10% з кожного дропу — на збори для ЗСУ</span>
+    <span>10% з кожної колекції — на збори для ЗСУ</span>
     <a href="index.html#fund">Звіти →</a>
   </div>
 </div>
@@ -27,10 +27,10 @@
       Терикон
     </a>
     <nav class="nav" aria-label="Магазин">
-      <a class="hot" href="index.html#drop">Дроп 07</a>
+      <a class="hot" href="index.html#drop">Новинки</a>
       <a href="catalog.html">Каталог</a>
-      <a href="index.html#archive">Архів</a>
       <a href="product.html#sizes">Розміри</a>
+      <a href="cart.html">Доставка</a>
     </nav>
     <div class="header__actions">
       <button class="icon-btn" type="button" aria-label="Пошук">
@@ -59,11 +59,11 @@
   <form class="wrap checkout" aria-label="Оформлення замовлення">
     <div>
       <section class="block" aria-labelledby="items-title">
-        <h2 class="display" id="items-title">2 речі</h2>
+        <h2 class="display" id="items-title">Ваші речі</h2>
         <div>
           <div class="line-item">
-            <div class="line-item__img"><img src="img/hoodie-front.svg" alt="Худі «Нічна зміна»"></div>
-            <div><h3>Худі «Нічна зміна»</h3><p>Шлак · M · ТРК-07-HD</p></div>
+            <div class="line-item__img"><img src="img/hoodie-front.svg" alt="Худі оверсайз"></div>
+            <div><h3>Худі оверсайз</h3><p>Чорне · розмір M</p></div>
             <div class="line-item__side">
               <span class="card__price">2 400 ₴</span>
               <div class="qty" aria-label="Кількість"><button type="button" data-step="-" aria-label="Менше">−</button><output>1</output><button type="button" data-step="+" aria-label="Більше">+</button></div>
@@ -71,8 +71,8 @@
             </div>
           </div>
           <div class="line-item">
-            <div class="line-item__img"><img src="img/cargo.svg" alt="Карго «Відвал»"></div>
-            <div><h3>Карго «Відвал»</h3><p>Шлак · L · ТРК-07-CP</p></div>
+            <div class="line-item__img"><img src="img/cargo.svg" alt="Штани карго"></div>
+            <div><h3>Штани карго</h3><p>Чорні · розмір L</p></div>
             <div class="line-item__side">
               <span class="card__price">2 900 ₴</span>
               <div class="qty" aria-label="Кількість"><button type="button" data-step="-" aria-label="Менше">−</button><output>1</output><button type="button" data-step="+" aria-label="Більше">+</button></div>
@@ -80,20 +80,20 @@
             </div>
           </div>
         </div>
-        <p class="alert"><i></i>Речі з дропу тримаємо за вами 15 хвилин, поки ви оформлюєте замовлення.</p>
+        <p class="alert"><i></i>Речі з колекції тримаємо за вами 15 хвилин, поки ви оформлюєте замовлення.</p>
       </section>
 
       <section class="block" aria-labelledby="ship-title">
         <h2 class="display" id="ship-title">Доставка</h2>
-        <p class="np"><i>НП</i>Нова Пошта · відправка наступного дня</p>
+        <p class="np"><i>НП</i>Нова Пошта · відправляємо наступного дня</p>
         <div class="options">
           <label class="option"><input type="radio" name="ship" checked><span><b>У відділення</b><small>1–2 дні</small></span><em>≈ 70 ₴</em></label>
-          <label class="option"><input type="radio" name="ship"><span><b>У поштомат</b><small>1–2 дні, до 30×40×60 см</small></span><em>≈ 60 ₴</em></label>
+          <label class="option"><input type="radio" name="ship"><span><b>У поштомат</b><small>1–2 дні</small></span><em>≈ 60 ₴</em></label>
           <label class="option"><input type="radio" name="ship"><span><b>Кур’єром</b><small>до дверей, 2 дні</small></span><em>≈ 120 ₴</em></label>
         </div>
         <div class="fields">
           <div class="field"><label for="city">Місто</label><input id="city" type="text" value="Кривий Ріг"></div>
-          <div class="field"><label for="branch">Відділення</label><select id="branch"><option>Відділення №12 (до 30 кг)</option><option>Відділення №3 (вантажне)</option><option>Відділення №27 (до 10 кг)</option></select></div>
+          <div class="field"><label for="branch">Відділення</label><select id="branch"><option>Відділення №12</option><option>Відділення №3</option><option>Відділення №27</option></select></div>
         </div>
       </section>
 
@@ -110,9 +110,9 @@
       <section class="block" aria-labelledby="pay-title">
         <h2 class="display" id="pay-title">Оплата</h2>
         <div class="options">
-          <label class="option"><input type="radio" name="pay" checked><span><b>Карткою, Apple Pay або Google Pay</b><small>через monobank, одразу</small></span><em></em></label>
+          <label class="option"><input type="radio" name="pay" checked><span><b>Карткою, Apple Pay або Google Pay</b><small>одразу, через monobank</small></span><em></em></label>
           <label class="option"><input type="radio" name="pay"><span><b>Частинами від monobank</b><small>4 платежі без переплат</small></span><em>4 × 1 343 ₴</em></label>
-          <label class="option"><input type="radio" name="pay"><span><b>Накладений платіж</b><small>при отриманні у відділенні</small></span><em>+2% і 20 ₴</em></label>
+          <label class="option"><input type="radio" name="pay"><span><b>Під час отримання</b><small>у відділенні Нової Пошти</small></span><em>+2% і 20 ₴</em></label>
         </div>
       </section>
     </div>
@@ -136,13 +136,13 @@
   <p class="footer__big" aria-hidden="true">Терикон</p>
   <div class="wrap">
     <div class="footer__cols">
-      <div><h3 class="label">Магазин</h3><ul><li><a href="index.html#drop">Дроп 07</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="index.html#archive">Архів</a></li><li><a href="product.html#sizes">Розмірна сітка</a></li></ul></div>
-      <div><h3 class="label">Допомога</h3><ul><li><a href="cart.html">Доставка й оплата</a></li><li><a href="cart.html">Повернення 14 днів</a></li><li><a href="product.html">Догляд за речами</a></li></ul></div>
+      <div><h3 class="label">Магазин</h3><ul><li><a href="index.html#drop">Новинки</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="product.html#sizes">Таблиця розмірів</a></li></ul></div>
+      <div><h3 class="label">Допомога</h3><ul><li><a href="cart.html">Доставка й оплата</a></li><li><a href="cart.html">Обмін і повернення</a></li><li><a href="index.html#how">Що таке дроп</a></li></ul></div>
       <div><h3 class="label">Контакти</h3><ul><li><a href="index.html#subscribe">Telegram @terykon_store</a></li><li><a href="index.html#subscribe">Instagram @terykon.ua</a></li><li>Шоурум у Кривому Розі, за записом</li></ul></div>
       <div><h3 class="label">Оплата</h3><ul><li>monobank</li><li>Apple Pay, Google Pay</li><li>Нова Пошта, 1–2 дні</li></ul></div>
     </div>
     <div class="label footer__legal">
-      <span>© 2026 Терикон · концепт для портфоліо, бренд вигаданий</span>
+      <span>© 2026 Терикон · концепт для портфоліо, бренд вигаданий, фото згенеровані ШІ</span>
       <span>Дизайн і розробка: [Ваше ім’я]</span>
     </div>
   </div>
