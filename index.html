@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Хвоя — будиночки в Карпатах</title>
+  <meta name="description" content="Шість дерев’яних будиночків у смерековому лісі біля Яремче. Чан на дровах, гори та тиша за 3,5 години від Львова. Концепт-проєкт.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Unbounded:wght@500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 30'%3E%3Cpath fill='%2312261f' d='M11 0l7 9h-3l6 9h-4l5 8h-9.5v4h-3v-4H0l5-8H1l6-9H4z'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- Спільні графічні елементи: силует смереки -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="spruce" viewBox="0 0 40 120">
+      <path d="M20 0 28 22h-4l9 24h-6l10 28h-8l11 30H22v16h-4v-16H0l11-30H3l10-28H7l9-24h-4z"/>
+    </symbol>
+    <symbol id="logo-mark" viewBox="0 0 22 30">
+      <path d="M11 0l7 9h-3l6 9h-4l5 8h-9.5v4h-3v-4H0l5-8H1l6-9H4z"/>
+    </symbol>
+    <pattern id="ridge-trees" width="28" height="40" patternUnits="userSpaceOnUse">
+      <rect width="28" height="40" fill="#7f9891"/>
+      <use href="#spruce" x="2" y="6" width="10" height="30" fill="#6c877f"/>
+      <use href="#spruce" x="15" y="18" width="8" height="24" fill="#728c84"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="wrap nav">
+  <a class="logo" href="#top" aria-label="Хвоя, на головну">
+    <svg aria-hidden="true"><use href="#logo-mark"/></svg>
+    ХВОЯ
+  </a>
+  <nav aria-label="Розділи сайту">
+    <ul>
+      <li><a href="#cabins">Будиночки</a></li>
+      <li><a href="#seasons">Сезони</a></li>
+      <li><a href="#chan">Чан</a></li>
+      <li><a href="#route">Дорога</a></li>
+      <li><a href="#reviews">Відгуки</a></li>
+      <li><a href="#faq">Питання</a></li>
+    </ul>
+  </nav>
+  <a class="btn" href="#booking">Забронювати</a>
+</header>
+
+<main id="top">
+
+  <!-- ===== Герой ===== -->
+  <section class="wrap" aria-labelledby="hero-title">
+    <div class="hero">
+      <svg class="hero__art" viewBox="0 0 1440 780" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c6d5d4"/>
+            <stop offset=".66" stop-color="#e9dcc2"/>
+            <stop offset="1" stop-color="#f2cf9f"/>
+          </linearGradient>
+        </defs>
+        <rect width="1440" height="780" fill="url(#sky)"/>
+        <g transform="translate(0 100)">
+        <circle cx="1060" cy="350" r="50" fill="#f2a65a"/>
+        <!-- дальній хребет -->
+        <path d="M0 392Q170 312 340 352T680 318T1020 336T1360 300T1700 330V680H0Z" fill="#a9bab6"/>
+        <!-- середній хребет зі смереками -->
+        <path d="M0 452Q220 372 440 420T880 392T1320 410T1760 386V680H0Z" fill="url(#ridge-trees)"/>
+        <!-- туман у долині -->
+        <rect y="440" width="1440" height="46" fill="#eef1ea" opacity=".55"/>
+        <rect y="472" width="1440" height="22" fill="#eef1ea" opacity=".35"/>
+        <!-- ближній схил ліворуч -->
+        <path d="M0 524Q180 452 380 482T720 544V680H0Z" fill="#2a473c"/>
+        <g fill="#1b352d">
+          <use href="#spruce" x="10" y="372" width="50" height="150"/>
+          <use href="#spruce" x="62" y="400" width="40" height="120"/>
+          <use href="#spruce" x="104" y="340" width="56" height="168"/>
+          <use href="#spruce" x="168" y="380" width="42" height="126"/>
+          <use href="#spruce" x="214" y="350" width="50" height="150"/>
+          <use href="#spruce" x="270" y="392" width="38" height="114"/>
+          <use href="#spruce" x="316" y="372" width="44" height="132"/>
+          <use href="#spruce" x="372" y="410" width="34" height="102"/>
+          <use href="#spruce" x="420" y="428" width="30" height="90"/>
+          <use href="#spruce" x="470" y="446" width="28" height="84"/>
+          <use href="#spruce" x="520" y="462" width="24" height="72"/>
+          <use href="#spruce" x="566" y="478" width="22" height="66"/>
+        </g>
+        <!-- полонина з будиночком праворуч -->
+        <path d="M640 680Q820 562 1060 550T1440 522V680Z" fill="#3e5e4a"/>
+        <polygon points="1112,552 1156,478 1200,552" fill="#3b2a22"/>
+        <polygon points="1143,544 1156,520 1169,544" fill="#f7b866"/>
+        <ellipse cx="1232" cy="551" rx="17" ry="6" fill="#3b2a22"/>
+        <g fill="#17302a">
+          <use href="#spruce" x="1000" y="478" width="26" height="78"/>
+          <use href="#spruce" x="1040" y="452" width="34" height="102"/>
+          <use href="#spruce" x="1258" y="384" width="56" height="168"/>
+          <use href="#spruce" x="1306" y="412" width="46" height="138"/>
+          <use href="#spruce" x="1350" y="350" width="66" height="198"/>
+          <use href="#spruce" x="1404" y="394" width="52" height="156"/>
+        </g>
+        <!-- передній план -->
+        <path d="M0 680V626Q360 600 720 620T1440 610V680Z" fill="#12261f"/>
+        </g>
+      </svg>
+
+      <p class="hero__coords">48°24′ пн. ш.<br>24°36′ сх. д.<br>640 м над рівнем моря</p>
+
+      <div class="hero__copy">
+        <h1 id="hero-title">Ліс, гори й тиша <em>за 3,5 години</em> від Львова</h1>
+        <p>Шість дерев’яних будиночків у смерековому лісі біля Яремче. У кожного своя тераса з видом на гори, до сусідів 80 метрів.</p>
+      </div>
+    </div>
+
+    <form class="booking" id="booking" aria-label="Перевірка вільних дат" onsubmit="return false">
+      <div class="field">
+        <label for="date-in">Заїзд</label>
+        <input id="date-in" type="text" value="12 липня">
+      </div>
+      <div class="field">
+        <label for="date-out">Виїзд</label>
+        <input id="date-out" type="text" value="15 липня">
+      </div>
+      <div class="field">
+        <label for="guests">Гості</label>
+        <select id="guests">
+          <option>2 дорослих</option>
+          <option>2 дорослих, 1 дитина</option>
+          <option>4 дорослих</option>
+          <option>6 гостей</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="cabin">Будиночок</label>
+        <select id="cabin">
+          <option>Будь-який</option>
+          <option>«Чорниця»</option>
+          <option>«Брусниця»</option>
+          <option>«Смерекова хата»</option>
+        </select>
+      </div>
+      <button class="btn" type="submit">Перевірити дати</button>
+    </form>
+
+    <ul class="facts" aria-label="Коротко про місце">
+      <li><b>6</b><span>будиночків на 4 га смерекового лісу</span></li>
+      <li><b>80 м</b><span>до найближчих сусідів</span></li>
+      <li><b>15 хв</b><span>машиною до Яремче і водоспаду Пробій</span></li>
+      <li><b>45 хв</b><span>до підйомників Буковеля</span></li>
+    </ul>
+  </section>
+
+  <!-- ===== Будиночки ===== -->
+  <section class="section" id="cabins" aria-labelledby="cabins-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Будиночки</p>
+        <h2 class="h2" id="cabins-title">Шість будиночків трьох типів</h2>
+        <p class="lead">Усі зведені з карпатської смереки у 2024 році. Постіль, рушники, посуд і дрова вже на місці.</p>
+      </div>
+
+      <div class="cabins">
+        <article class="cabin">
+          <svg class="cabin__art" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="500" height="300" fill="#dce5e1"/>
+            <path d="M0 150Q120 96 250 128T500 110V300H0Z" fill="#afc0ba"/>
+            <rect y="160" width="500" height="34" fill="#f2f4ef" opacity=".7"/>
+            <path d="M0 224Q160 196 300 210T500 200V300H0Z" fill="#4c6b57"/>
+            <polygon points="206,250 252,170 298,250" fill="#3b2a22"/>
+            <polygon points="236,244 252,214 268,244" fill="#f7b866"/>
+            <g fill="#2a473c">
+              <use href="#spruce" x="60" y="120" width="44" height="132"/>
+              <use href="#spruce" x="110" y="150" width="34" height="102"/>
+              <use href="#spruce" x="360" y="110" width="50" height="150"/>
+              <use href="#spruce" x="412" y="146" width="36" height="108"/>
+            </g>
+            <rect y="250" width="500" height="50" fill="#3c5a47"/>
+          </svg>
+          <div class="cabin__body">
+            <div class="cabin__top">
+              <h3>«Чорниця»</h3>
+              <span class="cabin__meta">28 м² · 2 гостей</span>
+            </div>
+            <p>A-frame для двох. Панорамне вікно на гори, камін і ліжко на антресолі.</p>
+            <ul>
+              <li>Камін</li>
+              <li>Панорамне вікно</li>
+              <li>Кавоварка</li>
+            </ul>
+            <div class="cabin__price">
+              <b>2 900 ₴ <small>/ ніч</small></b>
+              <a href="#booking">Обрати дати</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="cabin">
+          <svg class="cabin__art" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="500" height="300" fill="#f1c99c"/>
+            <circle cx="380" cy="118" r="34" fill="#ea8f45"/>
+            <path d="M0 140Q140 80 280 124T500 104V300H0Z" fill="#8a9c8c"/>
+            <path d="M0 214Q180 176 330 196T500 186V300H0Z" fill="#45644f"/>
+            <rect x="180" y="190" width="132" height="62" fill="#4a3426"/>
+            <polygon points="168,194 246,144 324,194" fill="#2f2119"/>
+            <rect x="198" y="208" width="26" height="30" fill="#f7b866"/>
+            <rect x="268" y="208" width="26" height="30" fill="#f7b866"/>
+            <rect x="160" y="250" width="172" height="8" fill="#2f2119"/>
+            <g fill="#2a473c">
+              <use href="#spruce" x="40" y="126" width="46" height="138"/>
+              <use href="#spruce" x="96" y="160" width="32" height="96"/>
+              <use href="#spruce" x="400" y="130" width="44" height="132"/>
+            </g>
+            <rect y="256" width="500" height="44" fill="#3c5a47"/>
+          </svg>
+          <div class="cabin__body">
+            <div class="cabin__top">
+              <h3>«Брусниця»</h3>
+              <span class="cabin__meta">46 м² · до 4 гостей</span>
+            </div>
+            <p>Дві спальні, кухня та тераса над гірським потічком.</p>
+            <ul>
+              <li>Кухня</li>
+              <li>Тераса</li>
+              <li>Мангал</li>
+            </ul>
+            <div class="cabin__price">
+              <b>4 300 ₴ <small>/ ніч</small></b>
+              <a href="#booking">Обрати дати</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="cabin">
+          <svg class="cabin__art" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="500" height="300" fill="#1d3340"/>
+            <circle cx="404" cy="70" r="20" fill="#f3e7c8"/>
+            <g fill="#f3e7c8">
+              <circle cx="70" cy="50" r="1.6"/><circle cx="150" cy="84" r="1.2"/><circle cx="232" cy="40" r="1.6"/>
+              <circle cx="300" cy="96" r="1.2"/><circle cx="460" cy="130" r="1.4"/><circle cx="34" cy="120" r="1.2"/>
+            </g>
+            <path d="M0 160Q140 104 270 140T500 120V300H0Z" fill="#2c4652"/>
+            <path d="M0 226Q170 198 320 214T500 206V300H0Z" fill="#e4ecef"/>
+            <rect x="150" y="182" width="170" height="70" fill="#4a3426"/>
+            <polygon points="136,188 235,128 334,188" fill="#e4ecef"/>
+            <polygon points="146,188 235,136 324,188" fill="#2f2119"/>
+            <rect x="170" y="200" width="28" height="32" fill="#f7b866"/>
+            <rect x="222" y="200" width="28" height="32" fill="#f7b866"/>
+            <rect x="274" y="200" width="28" height="32" fill="#f7b866"/>
+            <ellipse cx="386" cy="250" rx="30" ry="9" fill="#2f2119"/>
+            <path d="M376 236c-6-10 6-14 0-24M392 236c-6-10 6-14 0-24" fill="none" stroke="#c9d6dc" stroke-width="3" stroke-linecap="round"/>
+            <g fill="#16302b">
+              <use href="#spruce" x="40" y="130" width="46" height="138"/>
+              <use href="#spruce" x="432" y="150" width="40" height="120"/>
+            </g>
+          </svg>
+          <div class="cabin__body">
+            <div class="cabin__top">
+              <h3>«Смерекова хата»</h3>
+              <span class="cabin__meta">84 м² · до 6 гостей</span>
+            </div>
+            <p>Три спальні, власний чан на дровах і окремий вхід з лісу.</p>
+            <ul>
+              <li>Власний чан</li>
+              <li>3 спальні</li>
+              <li>Генератор</li>
+            </ul>
+            <div class="cabin__price">
+              <b>7 600 ₴ <small>/ ніч</small></b>
+              <a href="#booking">Обрати дати</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Сезони ===== -->
+  <section class="section section--dark" id="seasons" aria-labelledby="seasons-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Коли їхати</p>
+        <h2 class="h2" id="seasons-title">У Карпатах немає несезону</h2>
+        <p class="lead">Що робити біля «Хвої» в різні місяці. Маршрути, інструкторів і прокат підкажемо на місці.</p>
+      </div>
+
+      <div class="season-scroll">
+        <div class="season" aria-label="Календар активностей по місяцях">
+          <div style="display:contents">
+            <span></span>
+            <span class="season__month">січ</span>
+            <span class="season__month">лют</span>
+            <span class="season__month">бер</span>
+            <span class="season__month">кві</span>
+            <span class="season__month">тра</span>
+            <span class="season__month">чер</span>
+            <span class="season__month">лип</span>
+            <span class="season__month">сер</span>
+            <span class="season__month">вер</span>
+            <span class="season__month">жов</span>
+            <span class="season__month">лис</span>
+            <span class="season__month">гру</span>
+          </div>
+
+          <span class="season__label" style="grid-row:2">Рафтинг на Пруті</span>
+          <i class="bar bar--water" style="grid-row:2;grid-column:5/7" title="квітень–травень"></i>
+
+          <span class="season__label" style="grid-row:3">Сходження на Говерлу</span>
+          <i class="bar bar--mount" style="grid-row:3;grid-column:7/11" title="червень–вересень"></i>
+
+          <span class="season__label" style="grid-row:4">Купання в гірській річці</span>
+          <i class="bar bar--water" style="grid-row:4;grid-column:8/10" title="липень–серпень"></i>
+
+          <span class="season__label" style="grid-row:5">Чорниці та гриби</span>
+          <i class="bar bar--forest" style="grid-row:5;grid-column:8/12" title="липень–жовтень"></i>
+
+          <span class="season__label" style="grid-row:6">Осінні полонини</span>
+          <i class="bar bar--mount" style="grid-row:6;grid-column:10/12" title="вересень–жовтень"></i>
+
+          <span class="season__label" style="grid-row:7">Лижі в Буковелі</span>
+          <i class="bar bar--winter" style="grid-row:7;grid-column:2/5" title="січень–березень"></i>
+          <i class="bar bar--winter" style="grid-row:7;grid-column:13/14" title="грудень"></i>
+
+          <span class="season__label" style="grid-row:8">Чан під снігом</span>
+          <i class="bar bar--winter" style="grid-row:8;grid-column:2/5" title="січень–березень"></i>
+          <i class="bar bar--winter" style="grid-row:8;grid-column:12/14" title="листопад–грудень"></i>
+
+          <span class="season__label" style="grid-row:9">Різдво й колядування</span>
+          <i class="bar bar--winter" style="grid-row:9;grid-column:2/3" title="січень"></i>
+          <i class="bar bar--winter" style="grid-row:9;grid-column:13/14" title="грудень"></i>
+        </div>
+      </div>
+
+      <ul class="season-legend">
+        <li><i class="bar--mount"></i>Гори</li>
+        <li><i class="bar--water"></i>Вода</li>
+        <li><i class="bar--forest"></i>Ліс і ягоди</li>
+        <li><i class="bar--winter"></i>Зима</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Чан ===== -->
+  <section class="section" id="chan" aria-labelledby="chan-title">
+    <div class="wrap chan">
+      <div class="chan__copy">
+        <p class="eyebrow">Чан і сауна</p>
+        <h2 class="h2" id="chan-title">Гарячий чан просто під смереками</h2>
+        <p class="lead">Чавунний чан на дровах із карпатськими травами: чебрець, м’ята, ялівець. Розпалюємо за дві години до вашого часу, увечері вмикаємо підсвітку.</p>
+        <ul class="price-list">
+          <li><span>Чан на 3 години</span><span>1 800 ₴</span></li>
+          <li><span>Сауна на 2 години</span><span>1 200 ₴</span></li>
+          <li><span>Трав’яний чай і рушники</span><span>у ціні</span></li>
+          <li><span>«Смерекова хата»</span><span>власний чан</span></li>
+        </ul>
+      </div>
+
+      <div class="temps" aria-label="Температура води">
+        <div class="temp temp--hot">
+          <b>+40<sup>°C</sup></b>
+          <span>у чані з травами</span>
+        </div>
+        <div class="temp temp--cold">
+          <b>+8<sup>°C</sup></b>
+          <span>у гірському потічку поруч</span>
+        </div>
+        <div class="temps__steps">
+          <span>12 кроків від чану до потічка</span>
+          <span>працюємо цілий рік</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Дорога ===== -->
+  <section class="section" id="route" aria-labelledby="route-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Як доїхати</p>
+        <h2 class="h2" id="route-title">Машиною або нічним потягом</h2>
+        <p class="lead">До кожного будиночка веде асфальт, останні 300 метрів гравій. Паркування безкоштовне.</p>
+      </div>
+
+      <div class="routes">
+        <article class="route">
+          <div class="route__head">
+            <h3>Автомобілем</h3>
+            <span class="route__time">≈ 3,5 год зі Львова · ≈ 9 год з Києва</span>
+          </div>
+          <ol class="legs">
+            <li><b>Львів</b><span class="km">0 км</span><small>Виїжджайте трасою Н-09 у бік Рогатина.</small></li>
+            <li><b>Івано-Франківськ</b><span class="km">135 км</span><small>Далі та сама Н-09 на Надвірну та Яремче.</small></li>
+            <li><b>Яремче</b><span class="km">200 км</span><small>Остання заправка й супермаркет перед нами.</small></li>
+            <li><b>Хвоя, Микуличин</b><span class="km">210 км</span><small>Поворот біля дерев’яної церкви, далі за вказівниками.</small></li>
+          </ol>
+        </article>
+
+        <article class="route">
+          <div class="route__head">
+            <h3>Потягом</h3>
+            <span class="route__time">≈ 11 год з Києва · щодня</span>
+          </div>
+          <ol class="legs">
+            <li><b>Київ-Пасажирський</b><span class="km">21:40</span><small>Нічний потяг Київ — Рахів, купе або плацкарт.</small></li>
+            <li><b>Яремче</b><span class="km">08:50</span><small>Зустрічаємо на пероні з табличкою «Хвоя».</small></li>
+            <li><b>Хвоя, Микуличин</b><span class="km">+15 хв</span><small>Трансфер від вокзалу 350 ₴ за машину.</small></li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Відгуки ===== -->
+  <section class="section" id="reviews" aria-labelledby="reviews-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Відгуки</p>
+        <h2 class="h2" id="reviews-title">Що пишуть гості після виїзду</h2>
+      </div>
+      <div class="reviews">
+        <figure class="review">
+          <blockquote>Вимкнули телефони на другий день і не помітили. Вранці туман просто у вікні, ввечері чан під зорями. Повернемося взимку.</blockquote>
+          <figcaption><b>Оля і Максим</b>Київ · «Чорниця» · серпень 2026</figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote>Їхали з двома дітьми й собакою. Будиночок теплий, усе чисто, господарі підказали маршрут на Хом’як без натовпу.</blockquote>
+          <figcaption><b>Андрій</b>Львів · «Брусниця» · липень 2026</figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote>Світло в селі зникало двічі, а в нас усе працювало: панелі, акумулятори, Starlink. Можна спокійно працювати віддалено.</blockquote>
+          <figcaption><b>Ірина</b>Дніпро · «Смерекова хата» · березень 2026</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Питання та контакти ===== -->
+  <section class="section section--dark" id="faq" aria-labelledby="faq-title">
+    <div class="wrap closing">
+      <div class="faq">
+        <h2 class="h2" id="faq-title">Часті питання</h2>
+        <details open>
+          <summary>Чи є світло та інтернет під час відключень?</summary>
+          <p>Так. Кожен будиночок має сонячні панелі з акумуляторами, на ділянці є генератор і Starlink на 50–150 Мбіт/с.</p>
+        </details>
+        <details>
+          <summary>Можна приїхати із собакою?</summary>
+          <p>Так, у «Чорницю» та «Брусницю». Доплата 300 ₴ за весь заїзд, миску й підстилку дамо.</p>
+        </details>
+        <details>
+          <summary>Що взяти з собою?</summary>
+          <p>Постіль, рушники, посуд і дрова вже є. Візьміть трекінгове взуття й дощовик: у горах погода змінюється за годину.</p>
+        </details>
+        <details>
+          <summary>Як скасувати бронювання?</summary>
+          <p>Безкоштовно за 14 днів до заїзду. Пізніше утримуємо передоплату 30%.</p>
+        </details>
+      </div>
+
+      <div class="contact">
+        <p class="eyebrow">Бронювання</p>
+        <h2 class="h2">Забронюйте будиночок на вихідні</h2>
+        <p class="lead">Відповідаємо протягом години, з 9:00 до 22:00. Передоплата 30% на рахунок ФОП.</p>
+        <div class="contact__lines">
+          <a href="tel:+380000000000">+380 (00) 000 00 00</a>
+          <a href="#faq">@khvoia_karpaty</a>
+        </div>
+        <div class="contact__actions">
+          <a class="btn" href="#faq">Написати в Telegram</a>
+          <a class="btn btn--ghost" href="#faq">Viber</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Хвоя, нагору">
+      <svg aria-hidden="true"><use href="#logo-mark"/></svg>
+      ХВОЯ
+    </a>
+    <span class="concept-tag">Концепт-проєкт для портфоліо · компанія вигадана</span>
+    <span>Дизайн і розробка: [Ваше ім’я]</span>
+  </div>
+</footer>
+
+</body>
+</html>
