@@ -57,18 +57,18 @@
   </section>
 
   <div class="wrap catalog">
-    <form class="filters" aria-label="Фільтри">
+    <form class="filters" aria-label="Фільтри" data-filters>
       <fieldset class="filter">
         <legend class="label">Категорія</legend>
-        <label class="check"><span><input type="checkbox"> Худі</span><small>2</small></label>
-        <label class="check"><span><input type="checkbox"> Футболки та лонгсліви</span><small>2</small></label>
-        <label class="check"><span><input type="checkbox"> Штани</span><small>1</small></label>
-        <label class="check"><span><input type="checkbox"> Куртки</span><small>1</small></label>
-        <label class="check"><span><input type="checkbox"> Аксесуари</span><small>3</small></label>
+        <label class="check"><span><input type="checkbox" name="cat" value="hoodie"> Худі</span><small>2</small></label>
+        <label class="check"><span><input type="checkbox" name="cat" value="tee"> Футболки та лонгсліви</span><small>2</small></label>
+        <label class="check"><span><input type="checkbox" name="cat" value="pants"> Штани</span><small>1</small></label>
+        <label class="check"><span><input type="checkbox" name="cat" value="jacket"> Куртки</span><small>1</small></label>
+        <label class="check"><span><input type="checkbox" name="cat" value="acc"> Аксесуари</span><small>3</small></label>
       </fieldset>
       <fieldset class="filter">
         <legend class="label">Розмір</legend>
-        <div class="chips" data-group>
+        <div class="chips" data-group data-size-filter>
           <button class="chip" type="button" aria-pressed="false">S</button>
           <button class="chip" type="button" aria-pressed="false">M</button>
           <button class="chip" type="button" aria-pressed="false">L</button>
@@ -78,18 +78,18 @@
       </fieldset>
       <fieldset class="filter">
         <legend class="label">Колір</legend>
-        <label class="check"><span><input type="checkbox"> Чорний</span><small>6</small></label>
-        <label class="check"><span><input type="checkbox"> Сірий</span><small>1</small></label>
-        <label class="check"><span><input type="checkbox"> Помаранчевий</span><small>1</small></label>
-        <label class="check"><span><input type="checkbox"> Бежевий</span><small>1</small></label>
+        <label class="check"><span><input type="checkbox" name="color" value="black"> Чорний</span><small>6</small></label>
+        <label class="check"><span><input type="checkbox" name="color" value="gray"> Сірий</span><small>1</small></label>
+        <label class="check"><span><input type="checkbox" name="color" value="orange"> Помаранчевий</span><small>1</small></label>
+        <label class="check"><span><input type="checkbox" name="color" value="beige"> Бежевий</span><small>1</small></label>
       </fieldset>
-      <label class="toggle">Тільки в наявності <input type="checkbox"></label>
-      <button class="btn btn--dark" type="submit">Показати 9 речей</button>
+      <label class="toggle">Тільки в наявності <input type="checkbox" name="instock"></label>
+      <button class="btn btn--dark" type="button" data-filter-reset>Скинути фільтри</button>
     </form>
 
     <div>
       <div class="toolbar">
-        <p class="label mute" style="margin:0">Показано 9 з 9</p>
+        <p class="label mute" style="margin:0" data-filter-count aria-live="polite">Показано 9 з 9</p>
         <label class="label" style="display:flex;align-items:center;gap:10px">Сортувати
           <select class="select">
             <option>Спочатку нові</option>
@@ -99,9 +99,9 @@
           </select>
         </label>
       </div>
-      <div class="grid">
-        <a class="card" href="product.html">
-          <div class="card__media card__media--photo"><img src="img/p-hoodie-front.webp" alt="Худі оверсайз, чорне, зі світловідбивною смугою"><span class="label card__tag">Новинка</span></div>
+      <div class="grid" data-catalog>
+        <a class="card" href="product.html" data-cat="hoodie" data-sizes="S M XL XXL" data-color="black" data-instock="1">
+          <div class="card__media card__media--photo"><img src="img/p-hoodie-front.webp" alt="Худі оверсайз, чорне, зі світловідбивною смугою"><img class="card__alt" src="img/look-01-model.webp" alt="" loading="lazy"><span class="label card__tag">Новинка</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Худі оверсайз</h3><span class="card__price">2 400 ₴</span></div>
             <p class="card__sub">Чорне · світловідбивна смуга</p>
@@ -109,8 +109,8 @@
             <ul class="sizes-mini" aria-label="Розміри"><li>S</li><li class="low">M · 3</li><li class="out">L</li><li>XL</li><li>XXL</li></ul>
           </div>
         </a>
-        <a class="card" href="product.html">
-          <div class="card__media"><img src="img/bomber.svg" alt="Бомбер утеплений, графітовий"><span class="label card__tag card__tag--hot">Закінчується</span></div>
+        <a class="card" href="product.html" data-cat="jacket" data-sizes="M L XL" data-color="black" data-instock="1">
+          <div class="card__media"><img src="img/bomber.svg" alt="Бомбер утеплений, графітовий"><img class="card__alt" src="img/m-bomber.webp" alt="" loading="lazy"><span class="label card__tag card__tag--hot">Закінчується</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Бомбер утеплений</h3><span class="card__price">4 200 ₴</span></div>
             <p class="card__sub">Графітовий · помаранчевий кант</p>
@@ -118,8 +118,8 @@
             <ul class="sizes-mini" aria-label="Розміри"><li class="out">S</li><li>M</li><li>L</li><li class="low">XL · 2</li></ul>
           </div>
         </a>
-        <a class="card" href="product.html">
-          <div class="card__media card__media--photo"><img src="img/p-cargo.webp" alt="Штани карго, чорні"><span class="label card__tag">Новинка</span></div>
+        <a class="card" href="product.html" data-cat="pants" data-sizes="S M L XL" data-color="black" data-instock="1">
+          <div class="card__media card__media--photo"><img src="img/p-cargo.webp" alt="Штани карго, чорні"><img class="card__alt" src="img/m-cargo.webp" alt="" loading="lazy"><span class="label card__tag">Новинка</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Штани карго</h3><span class="card__price">2 900 ₴</span></div>
             <p class="card__sub">Чорні · смуги нижче колін</p>
@@ -127,8 +127,8 @@
             <ul class="sizes-mini" aria-label="Розміри"><li>S</li><li>M</li><li>L</li><li>XL</li></ul>
           </div>
         </a>
-        <a class="card" href="product.html">
-          <div class="card__media"><img src="img/longsleeve.svg" alt="Лонгслів, чорний"><span class="label card__tag">Новинка</span></div>
+        <a class="card" href="product.html" data-cat="tee" data-sizes="S M L XL XXL" data-color="black" data-instock="1">
+          <div class="card__media card__media--photo"><img src="img/p-longsleeve.webp" alt="Лонгслів, чорний"><span class="label card__tag">Новинка</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Лонгслів</h3><span class="card__price">1 500 ₴</span></div>
             <p class="card__sub">Чорний · смуги на манжетах</p>
@@ -136,7 +136,7 @@
             <ul class="sizes-mini" aria-label="Розміри"><li>S</li><li>M</li><li>L</li><li>XL</li><li>XXL</li></ul>
           </div>
         </a>
-        <a class="card" href="product.html">
+        <a class="card" href="product.html" data-cat="tee" data-sizes="S M L XL XXL" data-color="gray" data-instock="1">
           <div class="card__media card__media--photo"><img src="img/p-tee.webp" alt="Футболка оверсайз, сіра"><span class="label card__tag">Новинка</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Футболка оверсайз</h3><span class="card__price">1 100 ₴</span></div>
@@ -145,7 +145,7 @@
             <ul class="sizes-mini" aria-label="Розміри"><li>S</li><li>M</li><li>L</li><li>XL</li><li>XXL</li></ul>
           </div>
         </a>
-        <a class="card" href="product.html">
+        <a class="card" href="product.html" data-cat="acc" data-sizes="" data-color="black" data-instock="1">
           <div class="card__media card__media--photo"><img src="img/p-cap.webp" alt="Кепка, чорна"><span class="label card__tag card__tag--hot">Закінчується</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Кепка</h3><span class="card__price">900 ₴</span></div>
@@ -154,8 +154,8 @@
             <ul class="sizes-mini" aria-label="Розміри"><li class="low">Один розмір · 14</li></ul>
           </div>
         </a>
-        <a class="card" href="product.html">
-          <div class="card__media"><img src="img/beanie.svg" alt="Шапка в рубчик, помаранчева"><span class="label card__tag card__tag--hot">Закінчується</span></div>
+        <a class="card" href="product.html" data-cat="acc" data-sizes="" data-color="orange" data-instock="1">
+          <div class="card__media card__media--photo"><img src="img/p-beanie.webp" alt="Шапка в рубчик, помаранчева"><span class="label card__tag card__tag--hot">Закінчується</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Шапка в рубчик</h3><span class="card__price">650 ₴</span></div>
             <p class="card__sub">Помаранчева · один розмір</p>
@@ -163,7 +163,7 @@
             <ul class="sizes-mini" aria-label="Розміри"><li class="low">Один розмір · 9</li></ul>
           </div>
         </a>
-        <a class="card" href="product.html">
+        <a class="card" href="product.html" data-cat="hoodie" data-sizes="L XL" data-color="black" data-instock="1">
           <div class="card__media card__media--photo"><img src="img/p-hoodie-back.webp" alt="Худі з принтом на спині"><span class="label card__tag card__tag--hot">Остання партія</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Худі з принтом на спині</h3><span class="card__price">2 300 ₴</span></div>
@@ -172,7 +172,7 @@
             <ul class="sizes-mini" aria-label="Розміри"><li class="out">S</li><li class="out">M</li><li class="low">L · 3</li><li class="low">XL · 1</li></ul>
           </div>
         </a>
-        <a class="card card--sold" href="product.html">
+        <a class="card card--sold" href="product.html" data-cat="acc" data-sizes="" data-color="beige" data-instock="0">
           <div class="card__media card__media--photo"><img src="img/p-tote.webp" alt="Сумка-шопер"><span class="stamp">Розпродано</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Сумка-шопер</h3><span class="card__price">550 ₴</span></div>
@@ -182,6 +182,7 @@
           </div>
         </a>
       </div>
+      <div class="empty" data-filter-empty hidden><p class="display h3">Нічого не знайшлось</p><p class="mute">Спробуйте прибрати частину фільтрів.</p><button class="btn btn--dark" type="button" data-filter-reset>Скинути фільтри</button></div>
     </div>
   </div>
 </main>

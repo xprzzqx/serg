@@ -82,7 +82,7 @@
       </div>
 
       <div class="opt" id="sizes">
-        <div class="opt__head"><span class="label">Розмір</span><a href="#size-table">Таблиця розмірів</a></div>
+        <div class="opt__head"><span class="label">Розмір</span><span class="opt__links"><button class="link-btn" type="button" data-open-fit>Мій розмір?</button><a href="#size-table">Таблиця розмірів</a></span></div>
         <div class="size-grid" data-group data-single data-sizes>
           <button class="size" type="button" aria-pressed="false" data-size="S" data-left="12"><b>S</b><small>12 шт</small></button>
           <button class="size low" type="button" aria-pressed="true" data-size="M" data-left="3"><b>M</b><small>3 шт</small></button>
@@ -94,7 +94,7 @@
       </div>
 
       <div class="buy__actions">
-        <a class="btn btn--block" href="cart.html">Додати в кошик — 2 400 ₴</a>
+        <button class="btn btn--block" type="button" data-add-to-cart data-name="Худі оверсайз" data-color="Чорне" data-price="2400" data-img="img/p-hoodie-front.webp">Додати в кошик — 2 400 ₴</button>
         <button class="btn btn--ghost btn--block" type="button">Повідомити, якщо з’явиться L</button>
       </div>
 
@@ -152,7 +152,7 @@
       </div>
       <div class="grid">
         <a class="card" href="product.html">
-          <div class="card__media card__media--photo"><img src="img/p-cargo.webp" alt="Штани карго, чорні"><span class="label card__tag">Новинка</span></div>
+          <div class="card__media card__media--photo"><img src="img/p-cargo.webp" alt="Штани карго, чорні"><img class="card__alt" src="img/m-cargo.webp" alt="" loading="lazy"><span class="label card__tag">Новинка</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Штани карго</h3><span class="card__price">2 900 ₴</span></div>
             <p class="card__sub">Чорні · смуги нижче колін</p>
@@ -161,7 +161,7 @@
           </div>
         </a>
         <a class="card" href="product.html">
-          <div class="card__media"><img src="img/beanie.svg" alt="Шапка в рубчик, помаранчева"><span class="label card__tag card__tag--hot">Закінчується</span></div>
+          <div class="card__media card__media--photo"><img src="img/p-beanie.webp" alt="Шапка в рубчик, помаранчева"><span class="label card__tag card__tag--hot">Закінчується</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Шапка в рубчик</h3><span class="card__price">650 ₴</span></div>
             <p class="card__sub">Помаранчева · один розмір</p>
@@ -170,7 +170,7 @@
           </div>
         </a>
         <a class="card" href="product.html">
-          <div class="card__media"><img src="img/bomber.svg" alt="Бомбер утеплений, графітовий"><span class="label card__tag card__tag--hot">Закінчується</span></div>
+          <div class="card__media"><img src="img/bomber.svg" alt="Бомбер утеплений, графітовий"><img class="card__alt" src="img/m-bomber.webp" alt="" loading="lazy"><span class="label card__tag card__tag--hot">Закінчується</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Бомбер утеплений</h3><span class="card__price">4 200 ₴</span></div>
             <p class="card__sub">Графітовий · помаранчевий кант</p>
@@ -181,6 +181,33 @@
       </div>
     </div>
   </section>
+  <dialog class="fit" id="fit" aria-labelledby="fit-title">
+    <form method="dialog" class="fit__form" data-fit>
+      <div class="fit__head">
+        <h2 class="display h3" id="fit-title">Підберемо розмір</h2>
+        <button class="icon-btn" value="close" aria-label="Закрити"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <p class="mute" style="margin:0">Вкажіть зріст і вагу, порадимо розмір для худі оверсайз.</p>
+      <div class="fields">
+        <div class="field"><label for="fit-h">Зріст, см</label><input id="fit-h" type="number" inputmode="numeric" min="140" max="210" value="178"></div>
+        <div class="field"><label for="fit-w">Вага, кг</label><input id="fit-w" type="number" inputmode="numeric" min="40" max="150" value="72"></div>
+      </div>
+      <fieldset class="filter">
+        <legend class="label">Як любите носити</legend>
+        <div class="chips" data-group data-single data-fit-pref>
+          <button class="chip" type="button" aria-pressed="false" data-pref="-1">Ближче до тіла</button>
+          <button class="chip" type="button" aria-pressed="true" data-pref="0">Як на моделі</button>
+          <button class="chip" type="button" aria-pressed="false" data-pref="1">Ще вільніше</button>
+        </div>
+      </fieldset>
+      <div class="fit__result" aria-live="polite">
+        <span class="label mute">Ваш розмір</span>
+        <b data-fit-size>M</b>
+        <p data-fit-note>Сидить вільно, як на моделі на фото.</p>
+      </div>
+      <button class="btn btn--block" type="button" data-fit-apply>Обрати M</button>
+    </form>
+  </dialog>
 </main>
 <footer class="footer">
   <p class="footer__big" aria-hidden="true">Терикон</p>
