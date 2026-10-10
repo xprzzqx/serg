@@ -61,72 +61,11 @@
 
 <!-- ===== Герой ===== -->
 <header class="hero" id="top">
-  <svg class="hero__art" viewBox="0 0 1440 1050" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <defs>
-      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#bccdd0"/>
-        <stop offset=".5" stop-color="#dcdcc9"/>
-        <stop offset=".72" stop-color="#f0d4a8"/>
-        <stop offset="1" stop-color="#f4c58f"/>
-      </linearGradient>
-    </defs>
-    <rect width="1440" height="1050" fill="url(#sky)"/>
-    <g transform="translate(0 150)">
-      <g data-depth=".22">
-        <circle cx="760" cy="500" r="260" fill="url(#sunglow)"/>
-        <circle cx="760" cy="500" r="56" fill="#f3a55b"/>
-        <path d="M1080 330q6-6 12 0q6-6 12 0M1120 306q5-5 10 0q5-5 10 0" fill="none" stroke="#2e4a3c" stroke-width="2" stroke-linecap="round"/>
-      </g>
-      <g data-depth=".16">
-        <path d="M0 520Q180 440 360 480T720 452T1080 470T1440 430V900H0Z" fill="#b7c4c0"/>
-      </g>
-      <g data-depth=".11">
-        <path d="M0 566Q200 492 420 532T860 502T1300 532T1740 492V900H0Z" fill="#9db0aa"/>
-        <ellipse cx="380" cy="566" rx="440" ry="26" fill="#f2f3ec" opacity=".75" filter="url(#fog)"/>
-        <ellipse cx="1120" cy="580" rx="400" ry="22" fill="#f2f3ec" opacity=".7" filter="url(#fog)"/>
-      </g>
-      <g data-depth=".07">
-        <path d="M0 616Q240 546 480 596T960 576T1440 596V900H0Z" fill="url(#ridge-trees)"/>
-        <ellipse cx="760" cy="648" rx="560" ry="26" fill="#f2f3ec" opacity=".6" filter="url(#fog)"/>
-      </g>
-      <g data-depth=".03">
-        <path d="M380 900Q620 694 900 680T1440 646V900Z" fill="#3f5f4d"/>
-        <circle cx="860" cy="670" r="46" fill="url(#windowglow)"/>
-        <rect x="884" y="618" width="6" height="22" fill="#2b1f19"/>
-        <path d="M887 614c-10-18 12-28 0-48c-10-17 10-26 4-44" fill="none" stroke="#eef0ea" stroke-width="7" stroke-linecap="round" opacity=".55" filter="url(#soft)"/>
-        <polygon points="816,688 860,612 904,688" fill="#3b2a22"/>
-        <polygon points="847,680 860,654 873,680" fill="#ffc074"/>
-        <ellipse cx="944" cy="688" rx="20" ry="6" fill="#2b1f19"/>
-        <path d="M938 678c-5-9 5-12 0-21M950 678c-5-9 5-12 0-21" fill="none" stroke="#eef0ea" stroke-width="3" stroke-linecap="round" opacity=".7"/>
-        <g fill="#1b352d">
-          <use href="#spruce" x="1000" y="580" width="34" height="102"/>
-          <use href="#spruce" x="1040" y="546" width="44" height="132"/>
-          <use href="#spruce" x="1180" y="500" width="56" height="168"/>
-          <use href="#spruce" x="1232" y="532" width="46" height="138"/>
-          <use href="#spruce" x="1280" y="470" width="66" height="198"/>
-          <use href="#spruce" x="1340" y="504" width="52" height="156"/>
-          <use href="#spruce" x="1392" y="470" width="62" height="186"/>
-        </g>
-      </g>
-      <g>
-        <path d="M0 708Q200 616 420 656T760 746V900H0Z" fill="#2a473c"/>
-        <g fill="#16302a">
-          <use href="#spruce" x="-14" y="510" width="66" height="198"/>
-          <use href="#spruce" x="44" y="546" width="50" height="150"/>
-          <use href="#spruce" x="96" y="500" width="60" height="180"/>
-          <use href="#spruce" x="158" y="548" width="46" height="138"/>
-          <use href="#spruce" x="208" y="520" width="52" height="156"/>
-          <use href="#spruce" x="268" y="566" width="40" height="120"/>
-          <use href="#spruce" x="316" y="552" width="42" height="126"/>
-          <use href="#spruce" x="372" y="580" width="34" height="102"/>
-          <use href="#spruce" x="424" y="600" width="30" height="90"/>
-          <use href="#spruce" x="474" y="620" width="26" height="78"/>
-          <use href="#spruce" x="522" y="640" width="22" height="66"/>
-        </g>
-        <path d="M0 900V826Q360 796 720 816T1440 806V900Z" fill="#12261f"/>
-      </g>
-    </g>
-  </svg>
+  <div class="hero__art" aria-hidden="true">
+    <img class="hero__photo" src="img/hero.webp" alt="" width="1696" height="960" fetchpriority="high">
+    <span class="hero__fog hero__fog--1"></span>
+    <span class="hero__fog hero__fog--2"></span>
+  </div>
 
   <div class="wrap nav">
     <a class="logo" href="#top" aria-label="Хвоя, на головну">
@@ -220,23 +159,7 @@
       <div class="cabins">
         <article class="cabin">
           <div class="cabin__media">
-            <svg class="cabin__art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <rect width="400" height="300" fill="#d7e0dc"/>
-              <path d="M0 140Q100 90 200 120T400 100V300H0Z" fill="#b2c2bc"/>
-              <path d="M0 176Q120 136 240 160T400 150V300H0Z" fill="url(#ridge-trees)"/>
-              <ellipse cx="200" cy="178" rx="230" ry="18" fill="#f2f4ef" opacity=".8" filter="url(#fog)"/>
-              <path d="M0 232Q140 204 260 218T400 210V300H0Z" fill="#4c6b57"/>
-              <circle cx="200" cy="236" r="40" fill="url(#windowglow)"/>
-              <polygon points="160,256 200,186 240,256" fill="#3b2a22"/>
-              <polygon points="186,250 200,222 214,250" fill="#ffc074"/>
-              <g fill="#2a473c">
-                <use href="#spruce" x="30" y="140" width="42" height="126"/>
-                <use href="#spruce" x="78" y="170" width="32" height="96"/>
-                <use href="#spruce" x="290" y="124" width="48" height="144"/>
-                <use href="#spruce" x="340" y="160" width="36" height="108"/>
-              </g>
-              <rect y="256" width="400" height="44" fill="#3c5a47"/>
-            </svg>
+            <img class="cabin__art" src="img/cabin-chornytsia.webp" alt="A-frame «Чорниця» з терасою на схилі в тумані" width="960" height="720" loading="lazy" style="object-position:30% 50%">
             <span class="cabin__badge"><i></i>Вільно з 24 жовтня</span>
           </div>
           <div class="cabin__body">
@@ -257,25 +180,7 @@
 
         <article class="cabin">
           <div class="cabin__media">
-            <svg class="cabin__art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <rect width="400" height="300" fill="#f1caa0"/>
-              <circle cx="300" cy="128" r="90" fill="url(#sunglow)"/>
-              <circle cx="300" cy="128" r="30" fill="#ea8f45"/>
-              <path d="M0 140Q120 84 230 122T400 104V300H0Z" fill="#a49a8c"/>
-              <path d="M0 214Q150 176 280 196T400 186V300H0Z" fill="#45644f"/>
-              <circle cx="190" cy="226" r="56" fill="url(#windowglow)"/>
-              <rect x="130" y="196" width="122" height="58" fill="#4a3426"/>
-              <polygon points="118,200 191,152 264,200" fill="#2f2119"/>
-              <rect x="146" y="212" width="24" height="28" fill="#ffc074"/>
-              <rect x="212" y="212" width="24" height="28" fill="#ffc074"/>
-              <rect x="112" y="252" width="160" height="7" fill="#2f2119"/>
-              <g fill="#2a473c">
-                <use href="#spruce" x="20" y="130" width="44" height="132"/>
-                <use href="#spruce" x="68" y="164" width="30" height="90"/>
-                <use href="#spruce" x="320" y="134" width="42" height="126"/>
-              </g>
-              <rect y="258" width="400" height="42" fill="#3c5a47"/>
-            </svg>
+            <img class="cabin__art" src="img/cabin-brusnytsia.webp" alt="Будинок «Брусниця» з терасою та гірляндою над скелями" width="960" height="720" loading="lazy" style="object-position:45% 50%">
             <span class="cabin__badge"><i></i>Вільно з 31 жовтня</span>
           </div>
           <div class="cabin__body">
@@ -296,29 +201,7 @@
 
         <article class="cabin">
           <div class="cabin__media">
-            <svg class="cabin__art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <rect width="400" height="300" fill="#1d3340"/>
-              <circle cx="320" cy="70" r="18" fill="#f3e7c8"/>
-              <g fill="#f3e7c8">
-                <circle cx="50" cy="44" r="1.6"/><circle cx="120" cy="84" r="1.2"/><circle cx="190" cy="36" r="1.6"/>
-                <circle cx="250" cy="96" r="1.2"/><circle cx="380" cy="130" r="1.4"/><circle cx="24" cy="120" r="1.2"/>
-              </g>
-              <path d="M0 160Q110 104 220 140T400 120V300H0Z" fill="#2c4652"/>
-              <path d="M0 226Q140 198 260 214T400 206V300H0Z" fill="#e4ecef"/>
-              <circle cx="190" cy="220" r="70" fill="url(#windowglow)"/>
-              <rect x="110" y="184" width="160" height="68" fill="#4a3426"/>
-              <polygon points="96,190 190,130 284,190" fill="#e4ecef"/>
-              <polygon points="106,190 190,138 274,190" fill="#2f2119"/>
-              <rect x="128" y="202" width="26" height="30" fill="#ffc074"/>
-              <rect x="177" y="202" width="26" height="30" fill="#ffc074"/>
-              <rect x="226" y="202" width="26" height="30" fill="#ffc074"/>
-              <ellipse cx="320" cy="252" rx="28" ry="8" fill="#2f2119"/>
-              <path d="M310 240c-6-10 6-14 0-24M326 240c-6-10 6-14 0-24" fill="none" stroke="#c9d6dc" stroke-width="3" stroke-linecap="round"/>
-              <g fill="#16302b">
-                <use href="#spruce" x="18" y="130" width="46" height="138"/>
-                <use href="#spruce" x="356" y="150" width="40" height="120"/>
-              </g>
-            </svg>
+            <img class="cabin__art" src="img/cabin-smerekova.webp" alt="«Смерекова хата» взимку, поруч дерев’яний чан" width="960" height="720" loading="lazy" style="object-position:50% 50%">
             <span class="cabin__badge"><i></i>Вільно з 7 листопада</span>
           </div>
           <div class="cabin__body">
@@ -464,24 +347,12 @@
       </div>
 
       <div class="temps" aria-label="Температура води">
+        <img class="temps__photo" src="img/chan.webp" alt="Дерев’яний чан біля будинку взимку, над ним пара" width="1076" height="605" loading="lazy">
         <div class="temp temp--hot">
-          <svg class="temp__deco" viewBox="0 0 300 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-            <path d="M110 150c-14-26 16-40 0-70c-14-26 12-40 4-64M150 150c-14-26 16-40 0-70c-14-26 12-40 4-64M190 150c-14-26 16-40 0-70c-14-26 12-40 4-64" fill="none" stroke="#fff6ee" stroke-width="8" stroke-linecap="round" opacity=".18" filter="url(#soft)"/>
-            <ellipse cx="150" cy="200" rx="120" ry="34" fill="#8e4115"/>
-            <ellipse cx="150" cy="190" rx="104" ry="24" fill="#d97a3a"/>
-            <rect x="30" y="200" width="240" height="60" fill="#8e4115"/>
-          </svg>
           <b>+40<sup>°C</sup></b>
           <span>у чані з травами</span>
         </div>
         <div class="temp temp--cold">
-          <svg class="temp__deco" viewBox="0 0 300 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-            <path d="M0 170Q80 150 150 168T300 160V260H0Z" fill="#b6cfd6"/>
-            <path d="M0 200Q90 182 170 198T300 192V260H0Z" fill="#9dbcc6"/>
-            <path d="M20 214h40M110 228h60M210 216h50" stroke="#e8f1f3" stroke-width="3" stroke-linecap="round"/>
-            <ellipse cx="60" cy="176" rx="28" ry="10" fill="#7f9891"/>
-            <ellipse cx="240" cy="184" rx="22" ry="8" fill="#7f9891"/>
-          </svg>
           <b>+8<sup>°C</sup></b>
           <span>у гірському потічку поруч</span>
         </div>
@@ -615,28 +486,10 @@
       <svg aria-hidden="true"><use href="#logo-mark"/></svg>
       ХВОЯ
     </a>
-    <span class="concept-tag">Концепт-проєкт для портфоліо · компанія вигадана</span>
+    <span class="concept-tag">Концепт-проєкт для портфоліо · компанія вигадана · фото згенеровані ШІ</span>
     <span>Дизайн і розробка: [Ваше ім’я]</span>
   </div>
 </footer>
 
-<script>
-  // Легкий паралакс шарів пейзажу в герої
-  (function () {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var layers = document.querySelectorAll('.hero__art [data-depth]');
-    var ticking = false;
-    function update() {
-      var y = Math.min(window.scrollY, 1000);
-      layers.forEach(function (el) {
-        el.setAttribute('transform', 'translate(0 ' + (y * parseFloat(el.dataset.depth)).toFixed(1) + ')');
-      });
-      ticking = false;
-    }
-    window.addEventListener('scroll', function () {
-      if (!ticking) { requestAnimationFrame(update); ticking = true; }
-    }, { passive: true });
-  })();
-</script>
 </body>
 </html>
