@@ -68,7 +68,7 @@ FIX = {
     "zampiony": "žampiony", "česnekova": "česneková", "horcicna": "hořčičná", "tatarska": "tatarská",
     "caj": "čaj", "jabko": "jablko", "pomaranc": "pomeranč", "snídané": "snídaně",
     "palacinky": "palačinky", "medovnik": "medovník", "spaisi": "spicy", "rajčetem": "rajčetem",
-    "krevrtou": "krevetou", "lsland": "Island", "lced": "Iced", "olov": "Olov",
+    "krevrtou": "krevetou", "robiko": "tobiko", "lsland": "Island", "lced": "Iced", "olov": "Olov",
 }
 NEW_DAYS = 40
 SIDES = re.compile(r"sojov|zázvor|wasabi|hůlk|omáčk|^\d+\s*(g|ks|ml)\b", re.I)
@@ -83,6 +83,8 @@ def fix_text(s):
     s = re.sub(r"[A-Za-zÀ-žА-я]+", word, s)
     s = re.sub(r"\bs (?=[sSzZšŠžŽ])", "se ", s)  # "s smaženým" -> "se smaženým"
     s = re.sub(r"(?<!\d)\s*,\s*(?!\d)", ", ", s)
+    s = re.sub(r"(,\s*){2,}", ", ", s)  # empty items: "a, , b" -> "a, b"
+    s = re.sub(r"\.\s*,", ",", s)  # "omáčka., rýže" -> "omáčka, rýže"
     return re.sub(r"\s+", " ", s).strip()
 
 
@@ -116,7 +118,7 @@ def parse(p, cat):
         rolls = [fix_text(l) for l in lines if not SIDES.search(l)]
         item["r"] = [r[0].upper() + r[1:] for r in rolls]
     else:
-        d = fix_text(" ".join(lines))
+        d = fix_text(", ".join(lines))  # Poster often has one ingredient per line
         # trailing "250g 8ks", ", porce, 121g" etc.
         while True:
             m = re.search(r"[,\s]*(?:porce|(\d+)\s*(g|ks)\.?)\s*$", d, re.I)
