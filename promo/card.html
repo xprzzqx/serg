@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="uk"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+html,body{margin:0;width:100%;height:100%;background:#17181b;color:#d8d4cc;overflow:hidden;font-family:'IBM Plex Sans',sans-serif}
+.stage{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:var(--gap,28px);text-align:center}
+.bg{position:absolute;inset:0;background:url('terikon/img/look-01.webp') center 40%/cover;opacity:0;filter:saturate(.9)}
+.bg::after{content:"";position:absolute;inset:0;background:rgba(14,14,16,.78)}
+.label{font-family:'IBM Plex Mono',monospace;font-size:var(--lbl,22px);letter-spacing:.14em;text-transform:uppercase;color:#ff8a1e}
+.logo{display:flex;align-items:center;gap:.25em;font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;font-size:var(--big,220px);line-height:.9;letter-spacing:.01em}
+.logo svg{width:.62em;height:.52em}
+.sub{font-size:var(--sub,34px);color:#d8d4cc;max-width:26ch;line-height:1.3}
+.url{font-family:'IBM Plex Mono',monospace;font-size:var(--url,26px);color:#9d9a92;border-top:2px solid #ff8a1e;padding-top:18px}
+.bar{position:absolute;left:0;bottom:0;height:10px;background:#ff8a1e;width:0}
+.r{opacity:0;transform:translateY(30px)}
+</style></head><body>
+<div class="bg" id="bg"></div>
+<div class="stage" id="stage"></div>
+<div class="bar" id="bar"></div>
+<script>
+const P=new URLSearchParams(location.search), mode=P.get('m')||'intro';
+const tri='<svg viewBox="0 0 26 22"><path d="M1 21 10 3h6l9 18z" fill="#ff8a1e"/><path d="M6.6 10h12.8M3.6 16h18.8" stroke="#17181b" stroke-width="2"/></svg>';
+const st=document.getElementById('stage');
+if(mode==='intro'){st.innerHTML=`<div class="label r">Концепт · інтернет-магазин</div><div class="logo r">${tri}Терикон</div><div class="sub r">Стрітвір із Кривого Рогу. Дизайн і розробка сайту під ключ.</div>`}
+else{st.innerHTML=`<div class="label r">${P.get('kicker')||'Хочете такий сайт?'}</div><div class="logo r" style="--big:${P.get('big')||'120px'}">${P.get('title')||'Напишіть мені'}</div><div class="sub r">${P.get('sub')||'Дизайн, верстка й адаптив під телефон.'}</div><div class="url r">${P.get('url')||'xprzzqx.github.io/serg/terikon'}</div>`}
+const items=[...document.querySelectorAll('.r')];
+const ease=t=>t<0?0:t>1?1:1-Math.pow(1-t,3);
+window.setT=function(t){ // t in seconds
+  items.forEach((el,i)=>{const k=ease((t-0.15-i*0.18)/0.6);el.style.opacity=k;el.style.transform=`translateY(${(1-k)*30}px)`});
+  const b=document.getElementById('bg'); b.style.opacity=mode==='intro'?Math.min(1,t/1.2)*.9:.9; b.style.transform=`scale(${1.08-t*0.015})`;
+  document.getElementById('bar').style.width=(Math.min(1,t/(+P.get('dur')||3))*100)+'%';
+};
+if(P.get('v')){document.documentElement.style.setProperty('--big','150px');document.documentElement.style.setProperty('--sub','40px');document.documentElement.style.setProperty('--lbl','26px');document.documentElement.style.setProperty('--gap','36px')}
+setT(0);
+</script></body></html>
