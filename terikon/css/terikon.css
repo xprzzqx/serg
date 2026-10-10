@@ -398,3 +398,9 @@ button, input, select { font: inherit; color: inherit; }
 .how b { font-size: 18px; }
 .how p { margin: 0; color: var(--mute); }
 .how-note { margin: 20px 0 0; color: var(--mute); }
+
+/* ---------- фото товарів ---------- */
+.card__media--photo img, .card:hover .card__media--photo img { width: 100%; height: 100%; max-width: none; margin: 0; object-fit: cover; }
+.card:hover .card__media--photo img { transform: scale(1.04); }
+.line-item__img--photo img { width: 100%; height: 100%; object-fit: cover; }
+.card--sold .card__media--photo img { opacity: .55; }
