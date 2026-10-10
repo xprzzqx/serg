@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SushiMax — разбор и редизайн</title>
+<meta name="description" content="Разбор сайта sushimax.cz и концепт редизайна: проблемы, решения, фирменный стиль.">
+<meta name="theme-color" content="#0A0909">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/sushimax.css?v=4">
+<style>
+  .doc { max-width: 980px; margin: 0 auto; padding: 0 32px; }
+  .doc-head { padding: 90px 0 60px; border-bottom: 1px solid var(--line); }
+  .doc-head .logo { width: 84px; height: 84px; margin-bottom: 30px; }
+  .doc-head h1 { font-size: clamp(42px, 6vw, 72px); }
+  .doc-head p { color: #C9BFB6; font-size: 19px; max-width: 36em; margin: 22px 0 0; }
+  .doc-head .btn { margin-top: 32px; }
+  .part { padding: 72px 0; border-bottom: 1px solid var(--line); }
+  .part h2 { margin: 16px 0 26px; }
+  .part h3 { font-size: 26px; margin: 34px 0 10px; }
+  .part p, .part li { color: #D6CCC3; }
+  .part ul, .part ol { padding-left: 22px; }
+  .part li { margin: 6px 0; }
+  .part li::marker { color: var(--red-ink); }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 10px 0 8px; border: 1px solid var(--line); }
+  .kpis div { padding: 22px; border-left: 1px solid var(--line); }
+  .kpis div:first-child { border-left: 0; }
+  .kpis b { display: block; font: 500 38px/1 var(--serif); font-variant-numeric: lining-nums; }
+  .kpis span { display: block; margin-top: 8px; font-size: 13px; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  th { font: 600 11px/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  td { color: #D6CCC3; }
+  td b { color: var(--text); }
+  .shot { margin: 22px 0; border: 1px solid var(--line-2); }
+  .shot figcaption { padding: 10px 14px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); }
+  .shots-2 { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; align-items: start; }
+  .issue { padding: 26px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 54px 1fr; gap: 10px 18px; }
+  .issue:first-of-type { border-top: 0; }
+  .issue > b { font: italic 400 34px/1 var(--serif); color: var(--red-ink); }
+  .issue h3 { margin: 0 0 8px !important; }
+  .issue p { margin: 0; }
+  .issue .fix { margin-top: 10px; padding-left: 14px; border-left: 2px solid var(--red); color: var(--text); }
+  .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .sw { border: 1px solid var(--line-2); }
+  .sw i { display: block; height: 90px; }
+  .sw span { display: block; padding: 10px 12px; font-size: 13px; color: var(--muted); }
+  .sw span b { display: block; color: var(--text); font-weight: 600; }
+  .type { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .type div { padding: 24px; border: 1px solid var(--line); }
+  .type .a { font: 500 46px/1.05 var(--serif); }
+  .type .a em { color: var(--red-ink); font-weight: 400; }
+  .type .b { font: 500 18px/1.5 var(--sans); }
+  .type small { display: block; margin-top: 14px; color: var(--muted); font: 600 11px var(--sans); letter-spacing: .16em; text-transform: uppercase; }
+  .ask li b { color: var(--text); }
+  @media (max-width: 760px) {
+    .doc { padding: 0 18px; }
+    .kpis { grid-template-columns: 1fr 1fr; }
+    .kpis div:nth-child(3) { border-left: 0; }
+    .kpis div:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .shots-2, .type { grid-template-columns: 1fr; }
+    .swatches { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 14px; }
+    th, td { padding: 10px 8px; }
+    .tbl { overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+<main class="doc">
+
+<header class="doc-head">
+  <img class="logo" src="img/logo@2x.webp" alt="SushiMax" width="84" height="84">
+  <span class="label"><b>SushiMax</b> разбор · октябрь 2026</span>
+  <h1>Разбор sushimax.cz <em>и новый сайт</em></h1>
+  <p>Что есть на сайте сейчас, что мешает клиенту заказать, и что изменено в концепте. Все цифры взяты с живого сайта и из его API 10 октября 2026.</p>
+  <a class="btn btn--primary" href="index.html">Открыть новый сайт</a>
+</header>
+
+<section class="part">
+  <span class="label"><b>01</b> Что собрано</span>
+  <h2>Бизнес <em>в цифрах</em></h2>
+  <div class="kpis">
+    <div><b>2</b><span>филиала: Колин и Йиглава</span></div>
+    <div><b>608</b><span>позиций в меню (294 + 314)</span></div>
+    <div><b>395–3080</b><span>Kč за сет</span></div>
+    <div><b>30–45</b><span>минут доставка, по городу бесплатно</span></div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Филиал</th><th>Адрес</th><th>Телефон</th><th>Часы</th></tr>
+    <tr><td><b>Колин</b></td><td>Karlovo náměstí 72, 280 02</td><td>721 479 332</td><td>ежедневно 10–22</td></tr>
+    <tr><td><b>Йиглава</b></td><td>Úzká 635/1, 586 01</td><td>777 499 970<br>sushi.max.cz@gmail.com</td><td>ежедневно 10–22</td></tr>
+  </table></div>
+  <p>Оплата картой Visa и Mastercard. У каждого филиала свои Instagram и Facebook. Меню ведётся в кассовой системе Poster, сайт берёт его через API <code>/api/restaurants/{город}/menu</code>.</p>
+  <p>Логотип: персонаж Макс, бородатый парень с роллом на палочках, в бордовом круге. По решению владельца он остаётся без изменений.</p>
+</section>
+
+<section class="part">
+  <span class="label"><b>02</b> Сейчас</span>
+  <h2>Как сайт выглядит <em>сегодня</em></h2>
+  <p>Сайт новый, на Next.js. В нём уже есть выбор города, корзина и аллергены. Дизайн тёмный с красным. Основа правильная, но путь до заказа длинный, а меню неудобно смотреть.</p>
+  <figure class="shot"><img src="razbor/old-home.webp" alt="Главная sushimax.cz" width="1200" height="817" loading="lazy"><figcaption>Главная: баннер и логотип на весь экран, ни одного блюда и ни одной цены</figcaption></figure>
+  <div class="shots-2">
+    <figure class="shot"><img src="razbor/old-menu.webp" alt="Меню на компьютере" width="1200" height="1000" loading="lazy"><figcaption>Меню на компьютере: 18 кнопок в три ряда, открывается с гунканов</figcaption></figure>
+    <figure class="shot"><img src="razbor/old-menu-mobile.webp" alt="Меню на телефоне" width="390" height="1500" loading="lazy"><figcaption>Телефон: кнопки занимают целый экран, одно блюдо на экран</figcaption></figure>
+  </div>
+</section>
+
+<section class="part">
+  <span class="label"><b>03</b> Проблемы</span>
+  <h2>Что мешает <em>заказать</em></h2>
+
+  <div class="issue"><b>1</b><div>
+    <h3>Главная не продаёт</h3>
+    <p>На первом экране слоган «Japonská chuť, maximální dopad» и две кнопки городов. Блюд, цен и сетов нет. Чтобы увидеть еду, нужно сделать минимум два перехода.</p>
+    <p class="fix">В концепте: под первым экраном сразу идут сеты с ценами, а в углу карточка «Сет недели».</p>
+  </div></div>
+
+  <div class="issue"><b>2</b><div>
+    <h3>Меню сложно листать</h3>
+    <p>18–20 категорий выведены кнопками в несколько рядов. На телефоне они занимают целый экран, а блюда видно только после прокрутки. Каждая карточка размером с экран, так что 294 блюда — это 294 экрана. Сначала открывается категория «sushi» (гунканы), а не сеты, которые продаются лучше всего. Блюда подгружаются по 9 штук.</p>
+    <p class="fix">В концепте: одна прилипающая строка категорий, которая подсвечивает раздел при прокрутке. На телефоне блюда идут компактными строками с фото слева. Поиск ищет по всему меню сразу.</p>
+  </div></div>
+
+  <div class="issue"><b>3</b><div>
+    <h3>Фото мутные</h3>
+    <p>Сайт показывает копии из Poster шириной 297 px и растягивает их до 400 px и больше. В Poster при этом лежат оригиналы около 1000 px. Фото к тому же разной формы: горизонтальные, квадратные и вертикальные.</p>
+    <p class="fix">В концепте: все 608 фото взяты в оригинале и обработаны одинаково: формат 4:3, лёгкая резкость и контраст, WebP. Одинаковые файлы хранятся один раз, получилось 588 фото и 24 МБ.</p>
+  </div></div>
+  <figure class="shot"><img src="razbor/photo-compare.webp" alt="Сравнение качества фото" width="1220" height="500" loading="lazy"><figcaption>Слева то, что сайт показывает сейчас, справа оригинал из Poster после обработки</figcaption></figure>
+
+  <div class="issue"><b>4</b><div>
+    <h3>Названия с ошибками</h3>
+    <p>В Колине у 210 из 294 названий нет чешской диакритики: «Gunkan pikantni s kurecim masem». Слово «kuřecí» написано пятью способами. Категория называется «Philadeiphia». Встречаются опечатки: «locosem», «ploby», «japonká», «rodzinkama», «krevrtou». Часть названий набрана капслоком. В одном коктейле осталось слово по-русски: «Modrá laguna (голубая лагуна)». У одних и тех же категорий в двух городах разные названия: «Klasicke» и «Roly», «Teple» и «Teplí rolky».</p>
+    <p class="fix">В концепте: скрипт <code>tools/build_menu.py</code> исправляет это автоматически при каждой выгрузке меню, категории обоих городов приведены к общим названиям. Но лучше один раз поправить названия в Poster: тогда и чеки будут без ошибок.</p>
+  </div></div>
+
+  <div class="issue"><b>5</b><div>
+    <h3>Не видно граммовки и количества штук</h3>
+    <p>В Колине у 236 из 294 позиций пустое поле веса. У сетов количество штук и вес спрятаны в конце описания («1300g 40ks»), а сайт показывает их как текст. Для сетов это главный вопрос: на сколько человек хватит.</p>
+    <p class="fix">В концепте: вес и штуки достаются из описаний, теперь они есть у 489 позиций из 608. У сетов дополнительно показана цена за штуку, например «Set Sakura · 40 шт · 19 Kč за штуку».</p>
+  </div></div>
+
+  <div class="issue"><b>6</b><div>
+    <h3>Главная кнопка — регистрация</h3>
+    <p>Ярко-красная кнопка в шапке — «Registrace», а не корзина и не «Заказать». Иконка корзины не показывает сумму. Для доставки еды регистрация только мешает: людям нужен заказ за минуту.</p>
+    <p class="fix">В концепте: красная кнопка в шапке — это корзина с суммой. Заказ без регистрации. На телефоне внизу закреплена кнопка корзины с количеством и суммой.</p>
+  </div></div>
+
+  <div class="issue"><b>7</b><div>
+    <h3>Старые ссылки ведут на 404</h3>
+    <p>Google всё ещё выдаёт адреса старого сайта: <code>/produkt/favorite</code>, <code>/menu/sety</code>, поддомен <code>jihlava.sushimax.cz</code>. Сейчас они открывают «Stránka nenalezena» или вообще не отвечают. Адрес <code>/kolin</code> ведёт на главную, а не в меню Колина. Нет <code>robots.txt</code>, <code>sitemap.xml</code>, картинки для превью ссылки и разметки ресторана для Google.</p>
+    <p class="fix">Это следующий этап (SEO), сделаем отдельно.</p>
+  </div></div>
+
+  <div class="issue"><b>8</b><div>
+    <h3>Логотип теряется в шапке</h3>
+    <p>Логотип подробный, а в шапке стоит размером 48 px: Макса и надпись SUSHI MAX не разглядеть. Рядом ещё раз написано «SushiMax» другим шрифтом. На первом экране тот же логотип повторён огромным кругом.</p>
+    <p class="fix">В концепте: логотип прежний, но всегда стоит в полном круге и с отступом. Крупно он появляется там, где у человека есть время на него посмотреть: в окне выбора города, в пустой корзине и на экране «Спасибо за заказ».</p>
+  </div></div>
+</section>
+
+<section class="part">
+  <span class="label"><b>04</b> Стиль</span>
+  <h2>Престиж <em>в чёрном и красном</em></h2>
+  <p>Тёмная гамма с красным осталась, как и сейчас, но стала спокойнее и дороже. Сделано так: глубокий чёрный фон, один красный из логотипа, тонкие линии вместо рамок и теней, антиква с курсивом в заголовках, много воздуха. Фото блюд сняты на тёмном фоне, поэтому на чёрном сайте сливаются с ним и выглядят как в журнале.</p>
+  <div class="swatches">
+    <div class="sw"><i style="background:#0A0909"></i><span><b>Нори</b>#0A0909 фон</span></div>
+    <div class="sw"><i style="background:#151212"></i><span><b>Уголь</b>#151212 карточки</span></div>
+    <div class="sw"><i style="background:#B8261C"></i><span><b>Красный Max</b>#B8261C кнопки</span></div>
+    <div class="sw"><i style="background:#3A0D09"></i><span><b>Вино</b>#3A0D09 акцентные блоки</span></div>
+    <div class="sw"><i style="background:#F4EEE8"></i><span><b>Рис</b>#F4EEE8 текст</span></div>
+  </div>
+  <h3>Шрифты</h3>
+  <div class="type">
+    <div><div class="a">Umění sushi <em>doručené</em></div><small>Playfair Display · заголовки и цены</small></div>
+    <div><div class="b">Ryba je čerstvá každý den, nikdy mražená. Риба свіжа щодня.</div><small>Onest · текст и интерфейс</small></div>
+  </div>
+  <p>Оба шрифта бесплатные (Google Fonts) и поддерживают чешскую диакритику и украинскую кириллицу.</p>
+</section>
+
+<section class="part">
+  <span class="label"><b>05</b> Что в концепте</span>
+  <h2>Было <em>и стало</em></h2>
+  <div class="tbl"><table>
+    <tr><th>Было</th><th>Стало</th></tr>
+    <tr><td>Город выбирается кнопкой на главной или в меню</td><td><b>При первом заходе</b> спрашиваем город и запоминаем его. Меню, цены, телефон и адрес подставляются сами</td></tr>
+    <tr><td>Слоган и пустой первый экран</td><td><b>Статус «открыто до 22:00»</b>, предложение, кнопки «Заказать» и «Позвонить», 45 мин / 0 Kč / 10–22, сет недели</td></tr>
+    <tr><td>Сеты — одна из 18 категорий</td><td><b>Блок сетов</b> сразу под первым экраном: штуки, вес, количество видов роллов, <b>цена за штуку</b></td></tr>
+    <tr><td>Нет</td><td><b>Метки «Хит» и «Новинка».</b> Новинки определяются автоматически по дате загрузки фото в Poster. Хиты сейчас для примера, нужен настоящий список от владельца</td></tr>
+    <tr><td>Обеды Йиглавы спрятаны в категории «Obéd»</td><td><b>Отдельный блок «Обеденное меню от 150 Kč»</b>, виден только для Йиглавы</td></tr>
+    <tr><td>Корзина без допродажи</td><td><b>«К суши подойдёт»:</b> соусы, имбирь, напитки в один клик, только то, что есть в меню города</td></tr>
+    <tr><td>Вечером заказать нельзя</td><td><b>Предзаказ:</b> когда закрыто, сайт так и говорит и предлагает время доставки на завтра</td></tr>
+    <tr><td>Каждый раз собирать заказ заново</td><td><b>«Повторить заказ»</b>: прошлая корзина запоминается в браузере, без регистрации</td></tr>
+    <tr><td>Только чешский</td><td><b>CZ, UA, EN</b> для интерфейса. Названия блюд остаются чешскими</td></tr>
+  </table></div>
+</section>
+
+<section class="part">
+  <span class="label"><b>06</b> Нужно от владельца</span>
+  <h2>Что уточнить <em>перед запуском</em></h2>
+  <ol class="ask">
+    <li><b>Хиты продаж</b>: 5–10 позиций из отчёта Poster.</li>
+    <li><b>Зоны доставки и минимальная сумма заказа</b>, есть ли самовывоз.</li>
+    <li><b>Наличные:</b> принимает ли курьер наличные или только карту.</li>
+    <li><b>Адрес Колина:</b> на сайте Karlovo náměstí 72, в реестре Zámecká 82. Какой правильный?</li>
+    <li><b>Аллергены по блюдам</b>, если они есть в техкартах.</li>
+    <li><b>Цены по городам:</b> 10 одинаковых блюд стоят по-разному (например, Fitness rolka 239 и 297 Kč). Так задумано?</li>
+    <li><b>Фото для первого экрана</b> из Higgsfield, промпты в <code>higgsfield-prompts.md</code>.</li>
+  </ol>
+</section>
+
+<section class="part" style="border-bottom:0">
+  <span class="label"><b>07</b> Дальше</span>
+  <h2>Следующие <em>шаги</em></h2>
+  <ul>
+    <li>Вставить кадры из Higgsfield на первый экран и в блок доставки.</li>
+    <li>SEO: отдельные адреса /kolin и /jihlava, перенаправления со старых ссылок, sitemap, разметка ресторана и меню для Google.</li>
+    <li>Подключить настоящую отправку заказа (в Poster или в Telegram филиала).</li>
+  </ul>
+  <a class="btn btn--primary" href="index.html" style="margin-top:20px">Открыть новый сайт</a>
+</section>
+
+</main>
+<footer class="foot"><div class="doc foot__in"><p>Концепт редизайна SushiMax. Неофициальный материал, подготовлен для портфолио.</p><p class="foot__by">Design: [Ваше имя]</p></div></footer>
+</body>
+</html>
