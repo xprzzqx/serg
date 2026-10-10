@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SushiMax — rozvoz sushi Kolín a Jihlava</title>
+<meta name="description" content="Čerstvé sushi s rozvozem po Kolíně a Jihlavě za 30–45 minut. Doprava po městě zdarma, denně 10:00–22:00. Koncept redesignu.">
+<meta property="og:title" content="SushiMax — čerstvé sushi do 45 minut">
+<meta property="og:description" content="Rozvoz sushi po Kolíně a Jihlavě. Doprava po městě zdarma.">
+<meta property="og:image" content="img/hero.webp">
+<meta name="theme-color" content="#0E0D0C">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/sushimax.css?v=1">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5 9 3l1.6 4.2-2 1.4a11 11 0 0 0 6.8 6.8l1.4-2L21 15l-.5 2.4A3 3 0 0 1 17.6 20 14.6 14.6 0 0 1 4 6.4a3 3 0 0 1 2.6-2.9Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 21v-7h2.6l.4-3H14V9.2c0-.9.3-1.5 1.6-1.5H17V5.1A20 20 0 0 0 14.8 5C12.6 5 11 6.3 11 8.8V11H8.5v3H11v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="logo-roll" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="29" fill="#F3EDE4"/>
+    <circle cx="23" cy="20" r="1.6" fill="#0E0D0C" opacity=".85"/><circle cx="44" cy="22" r="1.4" fill="#0E0D0C" opacity=".85"/><circle cx="46" cy="41" r="1.6" fill="#0E0D0C" opacity=".85"/><circle cx="20" cy="43" r="1.4" fill="#0E0D0C" opacity=".85"/><circle cx="33" cy="51" r="1.3" fill="#0E0D0C" opacity=".85"/>
+    <circle cx="32" cy="32" r="17" fill="#0E0D0C"/>
+    <path d="M32 17.5a14.5 14.5 0 1 1-12.6 7.3L32 32Z" fill="#FF7A50"/>
+    <path d="M22 28.5c5 2 10.5 1.8 15.5-1M23.5 36c5.5 1.6 11 1.2 16-1.5" fill="none" stroke="#FFD3BF" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M19.4 24.8A14.5 14.5 0 0 1 32 17.5V32Z" fill="#A6C94A"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#menu" data-i18n="skip">Přeskočit na menu</a>
+
+<header class="top" id="top">
+  <div class="top__in wrap">
+    <a class="brand" href="#" aria-label="SushiMax">
+      <svg class="brand__mark"><use href="#logo-roll"/></svg>
+      <span class="wm">SUSHI<span>MA</span><svg class="wm__x" viewBox="0 0 40 48" aria-hidden="true"><path d="M5 3 35 45" stroke="#E7D3AE" stroke-width="7" stroke-linecap="round"/><path d="M35 3 5 45" stroke="#FF7A50" stroke-width="7" stroke-linecap="round"/></svg></span>
+    </a>
+
+    <button class="city-btn" id="cityBtn" type="button" aria-haspopup="dialog">
+      <svg><use href="#i-pin"/></svg><span id="cityBtnName">Kolín</span>
+    </button>
+
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#sety" data-i18n="navSets">Sety</a>
+      <a href="#menu" data-i18n="navMenu">Menu</a>
+      <a href="#doprava" data-i18n="navDelivery">Doprava</a>
+      <a href="#kontakt" data-i18n="navContact">Kontakt</a>
+    </nav>
+
+    <div class="lang" role="group" aria-label="Jazyk">
+      <button type="button" data-lang="cs" aria-pressed="true">CZ</button>
+      <button type="button" data-lang="uk">UA</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+
+    <button class="cart-btn" id="cartBtn" type="button">
+      <svg><use href="#i-bag"/></svg>
+      <span class="cart-btn__sum" id="cartBtnSum">0 Kč</span>
+      <span class="cart-btn__n" id="cartBtnN" hidden>0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="status" id="status"><i></i><span>Otevřeno do 22:00</span></p>
+        <h1 data-i18n-html="heroTitle">Čerstvé sushi<br>do&nbsp;<em>45&nbsp;minut</em></h1>
+        <p class="hero__lead" data-i18n="heroLead">Rolky balíme až po objednávce. Ryba je čerstvá, nikdy mražená. Po městě vozíme zdarma.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#menu"><span data-i18n="heroCta">Vybrat z menu</span><svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" id="heroCall" href="tel:+420721479332"><svg><use href="#i-phone"/></svg><span>721 479 332</span></a>
+        </div>
+        <ul class="facts">
+          <li><b>30–45</b><span data-i18n="fact1">minut k vám domů</span></li>
+          <li><b>0 Kč</b><span data-i18n="fact2">doprava po městě</span></li>
+          <li><b>10–22</b><span data-i18n="fact3">denně včetně víkendů</span></li>
+        </ul>
+      </div>
+      <figure class="hero__pic">
+        <img src="img/hero.webp" width="1600" height="1280" alt="Loďka se sushi: nigiri, rolky v tempuře a uramaki s kaviárem">
+        <a class="hero__tag" href="#sety" id="heroTag">
+          <img src="img/set-philadelphia.webp" alt="" width="64" height="64">
+          <span><small data-i18n="heroTagLabel">Set týdne</small><b id="heroTagName">Philadelphia Set</b><i id="heroTagMeta">40 ks · 1 649 Kč</i></span>
+        </a>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sets" id="sety" aria-labelledby="setsTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="setsTitle" data-i18n="setsTitle">Sety pro dva i pro partu</h2>
+        <p data-i18n="setsLead">U každého setu vidíte počet kousků, váhu a cenu za kus, takže se dají rovnou porovnat.</p>
+      </div>
+    </div>
+    <div class="sets__row" id="setsRow"></div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menuTitle">
+    <div class="wrap">
+      <div class="sec-head sec-head--menu">
+        <h2 id="menuTitle"><span data-i18n="menuTitle">Menu</span> <span class="menu__city" id="menuCity">Kolín</span></h2>
+        <label class="search">
+          <svg><use href="#i-search"/></svg>
+          <input id="search" type="search" autocomplete="off" data-i18n-ph="searchPh" placeholder="Hledat: losos, úhoř, avokádo…">
+        </label>
+      </div>
+    </div>
+    <div class="tabs" id="tabs"><div class="wrap tabs__in" id="tabsIn" role="tablist"></div></div>
+    <div class="wrap" id="menuBody"></div>
+    <p class="wrap empty" id="menuEmpty" hidden data-i18n="empty">Nic jsme nenašli. Zkuste jiné slovo.</p>
+  </section>
+
+  <section class="how" id="doprava" aria-labelledby="howTitle">
+    <div class="wrap">
+      <h2 id="howTitle" data-i18n="howTitle">Jak to funguje</h2>
+      <ol class="how__steps">
+        <li><b>01</b><h3 data-i18n="how1t">Vyberte pobočku</h3><p data-i18n="how1">Kolín nebo Jihlava. Každá kuchyně má vlastní menu a ceny.</p></li>
+        <li><b>02</b><h3 data-i18n="how2t">Složte košík</h3><p data-i18n="how2">Bez registrace. Stačí jméno, telefon a adresa.</p></li>
+        <li><b>03</b><h3 data-i18n="how3t">Kurýr je u vás</h3><p data-i18n="how3">Za 30–45 minut. Po městě zdarma, platit můžete kartou Visa nebo Mastercard.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="places" id="kontakt" aria-labelledby="placesTitle">
+    <div class="wrap">
+      <h2 id="placesTitle" data-i18n="placesTitle">Pobočky</h2>
+      <div class="places__grid" id="places"></div>
+      <details class="allergens">
+        <summary data-i18n="allergTitle">Seznam alergenů (nařízení EU 1169/2011)</summary>
+        <ol id="allergens"></ol>
+        <p data-i18n="allergNote">Alergeny v konkrétním jídle vám řekneme po telefonu.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <svg class="brand__mark"><use href="#logo-roll"/></svg>
+      <p data-i18n="footNote">Koncept redesignu SushiMax. Neoficiální web: objednávky se nikam neodesílají. Menu a ceny převzaty ze sushimax.cz, říjen 2026.</p>
+    </div>
+    <p class="foot__by"><a href="razbor.html" data-i18n="footRazbor">Rozbor současného webu</a> · <span>Design: [Vaše jméno]</span></p>
+  </div>
+</footer>
+
+<a class="cart-bar" id="cartBar" href="#" hidden>
+  <span><b id="cartBarN">0</b> <span data-i18n="items">položek</span></span>
+  <strong id="cartBarSum">0 Kč</strong>
+  <span class="cart-bar__go"><span data-i18n="toCart">Do košíku</span><svg><use href="#i-arrow"/></svg></span>
+</a>
+
+<!-- City picker -->
+<dialog class="modal city-modal" id="cityModal" aria-labelledby="cityTitle">
+  <form method="dialog" class="city-modal__in">
+    <svg class="city-modal__mark"><use href="#logo-roll"/></svg>
+    <h2 id="cityTitle" data-i18n="cityTitle">Kam vám sushi přivezeme?</h2>
+    <p data-i18n="cityLead">Menu a ceny se liší podle pobočky. Město můžete kdykoli změnit nahoře.</p>
+    <div class="city-modal__opts">
+      <button value="kolin" class="city-opt"><b>Kolín</b><span>Karlovo náměstí 72</span></button>
+      <button value="jihlava" class="city-opt"><b>Jihlava</b><span>Úzká 635/1</span></button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Product -->
+<dialog class="modal product" id="productModal">
+  <div class="product__in" id="productBody"></div>
+  <button class="modal__close" type="button" data-close aria-label="Zavřít"><svg><use href="#i-x"/></svg></button>
+</dialog>
+
+<!-- Cart drawer -->
+<dialog class="drawer" id="cartDrawer" aria-labelledby="cartTitle">
+  <div class="drawer__in">
+    <div class="drawer__head">
+      <h2 id="cartTitle"><span data-i18n="cart">Košík</span> <small id="cartCity">Kolín</small></h2>
+      <button class="modal__close" type="button" data-close aria-label="Zavřít"><svg><use href="#i-x"/></svg></button>
+    </div>
+    <div class="drawer__body" id="cartBody"></div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/menu-data.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+</body>
+</html>
