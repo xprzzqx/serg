@@ -37,7 +37,7 @@ body {
   font-size: 16px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 img, svg { max-width: 100%; display: block; }
 a { color: inherit; }
@@ -80,7 +80,10 @@ button, input, select { font: inherit; color: inherit; }
 .fundbar a { font-weight: 500; }
 
 /* ---------- шапка ---------- */
-.header { background: var(--slag); color: var(--concrete); border-bottom: 1px solid var(--line-dark); }
+.header { position: sticky; top: 0; z-index: 40; background: rgba(23, 24, 27, .94); color: var(--concrete); border-bottom: 1px solid var(--line-dark); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: transform .25s ease; }
+.header.is-hidden { transform: translateY(-100%); }
+html { scroll-padding-top: 80px; }
+@media (max-width: 760px) { .header .wrap { min-height: 60px; } .logo { font-size: 22px; } }
 .header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; }
 .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 700; font-size: 24px; letter-spacing: 0.02em; text-transform: uppercase; }
 .logo svg { width: 26px; height: 22px; }
@@ -114,14 +117,22 @@ button, input, select { font: inherit; color: inherit; }
 .hero__note { margin: 0; max-width: 44ch; color: var(--concrete); font-size: 18px; }
 .hero__timer { display: grid; gap: 10px; justify-items: start; }
 .hero__timer p { margin: 0; }
-/* телефон: фото окремим блоком над текстом, модель по центру */
+/* телефон: як на ПК — текст поверх фото, але компактно внизу, модель вгорі */
 @media (max-width: 760px) {
-  .hero__scene { position: relative; inset: auto; z-index: 0; display: block; height: min(118vw, 480px); object-position: 48.5% 30%;
-    -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent); mask-image: linear-gradient(180deg, #000 72%, transparent); }
-  .hero::after { display: none; }
-  .hero .wrap { position: relative; z-index: 1; min-height: 0; margin-top: -64px; padding-block: 0 48px; gap: 20px; }
-  .hero h1 { font-size: clamp(56px, 17vw, 88px); }
+  .hero__scene { object-position: 37% 100%; }
+  .hero::after { background:
+    linear-gradient(0deg, rgba(14, 14, 16, .97) 0%, rgba(14, 14, 16, .88) 36%, rgba(14, 14, 16, 0) 60%),
+    linear-gradient(180deg, rgba(14, 14, 16, .45) 0%, rgba(14, 14, 16, 0) 18%); }
+  .hero .wrap { min-height: clamp(720px, 210vw, 860px); align-content: end; gap: 14px; padding-block: 0 28px; }
+  .hero h1 { font-size: clamp(54px, 15.5vw, 76px); }
+  .hero__note { font-size: 16px; line-height: 1.5; }
+  .hero__cta { flex-wrap: nowrap; gap: 8px; }
+  .hero__cta .btn { flex: 1 1 auto; min-height: 48px; padding: 0 12px; font-size: 12px; letter-spacing: .05em; }
+  .hero__timer { gap: 8px; }
+  .countdown__cell { padding: 8px 12px; }
+  .countdown__num { font-size: 24px; }
 }
+
 @media (max-width: 520px) { .countdown__cell { min-width: 0; flex: 1 1 25%; padding: 12px 10px; } }
 
 /* ---------- біжучий рядок ---------- */

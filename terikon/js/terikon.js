@@ -274,3 +274,17 @@
   var checkout = document.querySelector('[data-checkout]');
   if (checkout) checkout.addEventListener('submit', function () { location.href = 'thanks.html'; });
 })();
+
+// Шапка: ховається при гортанні вниз, з'являється при будь-якому русі вгору
+(function () {
+  var header = document.querySelector('.header');
+  if (!header) return;
+  var last = window.scrollY, ticking = false;
+  function update() {
+    var y = window.scrollY;
+    if (y < 120 || y < last - 4 || document.body.classList.contains('no-scroll')) header.classList.remove('is-hidden');
+    else if (y > last + 6) header.classList.add('is-hidden');
+    last = y; ticking = false;
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { requestAnimationFrame(update); ticking = true; } }, { passive: true });
+})();
