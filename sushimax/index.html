@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SushiMax — rozvoz sushi Kolín a Jihlava</title>
 <meta name="description" content="Čerstvé sushi s rozvozem po Kolíně a Jihlavě do 45 minut. Doprava po městě zdarma, denně 10:00–22:00. Koncept redesignu.">
-<meta property="og:title" content="SushiMax — umění sushi, doručené až domů">
+<meta property="og:title" content="SushiMax — sushi, na které nečekáte">
 <meta property="og:description" content="Rozvoz sushi po Kolíně a Jihlavě. Doprava po městě zdarma.">
-<meta property="og:image" content="img/hero.webp">
-<meta name="theme-color" content="#0A0909">
+<meta property="og:image" content="img/hero-set.webp">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/sushimax.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/sushimax.css?v=5">
 </head>
 <body>
 
@@ -65,33 +65,40 @@
 
 <main>
   <section class="hero">
-    <div class="hero__bg"><img src="img/hero.webp" width="1600" height="1280" alt="" fetchpriority="high"></div>
+    <p class="hero__giant" aria-hidden="true">SUSHI<span>MAX</span></p>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__streak" aria-hidden="true"></div>
+    <button class="hero__set" id="heroSet" type="button"><img src="img/hero-set.webp" width="947" height="947" alt="VIP Set" fetchpriority="high"></button>
+    <p class="hero__cap" id="heroCap"></p>
     <div class="wrap hero__in">
       <div class="hero__copy">
         <p class="status" id="status"><i></i><span>Otevřeno do 22:00</span></p>
-        <h1 data-i18n-html="heroTitle">Umění sushi <em>doručené až domů</em></h1>
-        <p class="hero__lead" data-i18n="heroLead">Ryba je čerstvá každý den, nikdy mražená. Rolky připravujeme až po objednávce a po městě je vozíme zdarma.</p>
+        <h1 data-i18n-html="heroTitle">Sushi, na které <em>nečekáte</em></h1>
+        <p class="hero__lead" data-i18n="heroLead">Čerstvá ryba každý den, nikdy mražená. Rolky připravujeme až po objednávce.</p>
+        <div id="repeatHero"></div>
+      </div>
+      <div class="hero__side">
+        <div class="hero__num">45<small>min</small></div>
+        <p class="hero__sub" data-i18n-html="heroSub">Doprava po městě <b>0 Kč</b><br>Denně 10–22</p>
         <div class="hero__cta">
           <a class="btn btn--primary" href="#menu"><span data-i18n="heroCta">Objednat</span><svg><use href="#i-arrow"/></svg></a>
           <a class="btn btn--ghost" id="heroCall" href="tel:+420721479332"><svg><use href="#i-phone"/></svg><span>721 479 332</span></a>
         </div>
-        <div id="repeatHero"></div>
-        <ul class="facts">
-          <li><b>45</b><span data-i18n="fact1">minut k vám</span></li>
-          <li><b>0 Kč</b><span data-i18n="fact2">doprava po městě</span></li>
-          <li><b>10–22</b><span data-i18n="fact3">každý den</span></li>
-        </ul>
       </div>
     </div>
-    <a class="hero__seal" href="#sety" id="heroSeal"></a>
   </section>
+
+  <div class="ribbons" aria-hidden="true">
+    <div class="ribbon ribbon--a"><div class="ribbon__track" id="ribbonA"></div></div>
+    <div class="ribbon ribbon--b"><div class="ribbon__track" id="ribbonB"></div></div>
+  </div>
 
   <section class="sec sets" id="sety" aria-labelledby="setsTitle">
     <div class="wrap">
       <div class="sec-head">
         <div>
           <span class="label"><b>01</b> <span data-i18n="setsLabel">Sety</span></span>
-          <h2 id="setsTitle" data-i18n-html="setsTitle">Sety pro dva <em>i pro celou oslavu</em></h2>
+          <h2 id="setsTitle" data-i18n-html="setsTitle">Sety pro dva <em>i pro partu</em></h2>
         </div>
         <p data-i18n="setsLead">U každého setu vidíte počet kousků, váhu a cenu za kus. Sety se tak dají rovnou porovnat.</p>
       </div>
@@ -140,9 +147,9 @@
         <p data-i18n="howLead">Po městě vozíme zdarma. Platit můžete kartou Visa nebo Mastercard.</p>
       </div>
       <ol class="how__grid">
-        <li><b>i.</b><h3 data-i18n="how1t">Vyberte pobočku</h3><p data-i18n="how1">Kolín nebo Jihlava. Každá kuchyně má vlastní menu a ceny.</p></li>
-        <li><b>ii.</b><h3 data-i18n="how2t">Složte objednávku</h3><p data-i18n="how2">Bez registrace. Stačí jméno, telefon a adresa.</p></li>
-        <li><b>iii.</b><h3 data-i18n="how3t">Kurýr je u vás</h3><p data-i18n="how3">Do 45 minut. Když máme zavřeno, objednávku přijmeme na další den.</p></li>
+        <li><b>01</b><h3 data-i18n="how1t">Vyberte pobočku</h3><p data-i18n="how1">Kolín nebo Jihlava. Každá kuchyně má vlastní menu a ceny.</p></li>
+        <li><b>02</b><h3 data-i18n="how2t">Složte objednávku</h3><p data-i18n="how2">Bez registrace. Stačí jméno, telefon a adresa.</p></li>
+        <li><b>03</b><h3 data-i18n="how3t">Kurýr je u vás</h3><p data-i18n="how3">Do 45 minut. Když máme zavřeno, objednávku přijmeme na další den.</p></li>
       </ol>
     </div>
   </section>
@@ -152,7 +159,7 @@
       <div class="sec-head">
         <div>
           <span class="label"><b>04</b> <span data-i18n="placesLabel">Kontakt</span></span>
-          <h2 id="placesTitle" data-i18n-html="placesTitle">Dvě kuchyně, <em>jeden rukopis</em></h2>
+          <h2 id="placesTitle" data-i18n-html="placesTitle">Dvě kuchyně, <em>jeden styl</em></h2>
         </div>
       </div>
       <div class="places__grid" id="places"></div>
@@ -166,6 +173,7 @@
 </main>
 
 <footer class="foot">
+  <p class="foot__giant" aria-hidden="true">SUSHI<span>MAX</span></p>
   <div class="wrap foot__in">
     <div class="foot__brand">
       <img class="logo" src="img/logo.webp" width="52" height="52" alt="SushiMax">
@@ -210,7 +218,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="js/menu-data.js?v=3"></script>
-<script src="js/app.js?v=3"></script>
+<script src="js/menu-data.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
 </body>
 </html>

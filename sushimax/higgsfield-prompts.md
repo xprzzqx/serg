@@ -1,6 +1,6 @@
 # Промпты для Higgsfield — сайт SushiMax
 
-Нужно 4 кадра. Стиль сайта: премиум, чёрный с красным, глубокие тени, мало света, как в дорогом ресторане. Ваши фото блюд сняты на тёмном фоне, и новые кадры должны выглядеть как продолжение той же съёмки.
+Нужно 4 кадра. Стиль сайта «Noir Cinema»: чисто чёрный фон, красный как свет (контровая подсветка, неон), кадры как из ночного фильма. Ваши фото блюд сняты на тёмном фоне, и новые кадры должны выглядеть как продолжение той же съёмки.
 
 Генерируйте по 3–4 варианта, берите лучший и сохраняйте под указанным именем. Готовые файлы присылайте в чат или загружайте в папку `sushimax/img/` (на GitHub: Add file → Upload files, ветка `claude/sharp-gates-9ufwsx`). Сжимаю и встраиваю сам.
 
@@ -11,7 +11,7 @@
 **Хвост стиля.** Добавляйте его в конец каждого промпта, тогда кадры выглядят как одна съёмка:
 
 ```
-dark luxury restaurant mood, deep black background, low-key lighting with a single soft warm key light, subtle deep red accents, rich glossy textures, high-end food editorial photography, shot on 85mm, shallow depth of field, realistic, appetizing, no text, no logos, no watermark
+cinematic night mood, pure black background, low-key lighting with a red rim light from behind and a soft warm key light, deep red glow, rich glossy textures, high-end food editorial photography, shot on 85mm, shallow depth of field, realistic, appetizing, no text, no logos, no watermark
 ```
 
 **Negative prompt**, если есть такое поле:

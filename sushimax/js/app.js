@@ -25,7 +25,7 @@
   };
   // Sets shown in the "Sety" row (those missing in a city are skipped) and the hero card.
   const FEATURED = ['Set Takajama', 'Set Sakura', 'Blossom set', 'Philadelphia Set', 'VIP Set', 'Banzai', 'Set Mini', 'Vega Set', 'Futomaki 1+1', 'Maxx Set'];
-  const SEAL = 'Set Takajama';
+  const SEAL = 'VIP Set'; // the set on the hero photo
   // DEMO: real best-sellers must come from the owner (Poster sales report).
   const HITS = ['Set Sakura', 'Set Takajama', 'Philadelphia light', 'Fudžijama', 'Dark Tai', 'Maki s lososem'];
 
@@ -40,11 +40,13 @@
   const T = {
     cs: {
       skip: 'Přeskočit na menu', navSets: 'Sety', navMenu: 'Menu', navDelivery: 'Doprava', navContact: 'Kontakt',
-      heroTitle: 'Umění sushi <em>doručené až domů</em>',
-      heroLead: 'Ryba je čerstvá každý den, nikdy mražená. Rolky připravujeme až po objednávce a po městě je vozíme zdarma.',
+      heroTitle: 'Sushi, na které <em>nečekáte</em>',
+      heroLead: 'Čerstvá ryba každý den, nikdy mražená. Rolky připravujeme až po objednávce.',
+      heroSub: 'Doprava po městě <b>0 Kč</b><br>Denně 10–22',
+      ribbonA: ['Čerstvé sushi', '45 minut', 'Doprava zdarma', 'Nikdy mražené'], ribbonB: ['Kolín', 'Jihlava', 'Denně 10–22'],
       heroCta: 'Objednat', fact1: 'minut k vám', fact2: 'doprava po městě', fact3: 'každý den',
       openTill: 'Otevřeno do {t}', closedTill: 'Zavřeno · otevíráme {d} v {t}', today: 'dnes', tomorrow: 'zítra',
-      setsLabel: 'Sety', setsTitle: 'Sety pro dva <em>i pro celou oslavu</em>',
+      setsLabel: 'Sety', setsTitle: 'Sety pro dva <em>i pro partu</em>',
       setsLead: 'U každého setu vidíte počet kousků, váhu a cenu za kus. Sety se tak dají rovnou porovnat.',
       sealLabel: 'Set týdne',
       lunchLabel: 'Obědy', lunchTitle: 'Polední menu <em>od 150&nbsp;Kč</em>', lunchLead: 'Teplé jídlo na oběd s dovozem do kanceláře i domů.',
@@ -54,7 +56,7 @@
       how1t: 'Vyberte pobočku', how1: 'Kolín nebo Jihlava. Každá kuchyně má vlastní menu a ceny.',
       how2t: 'Složte objednávku', how2: 'Bez registrace. Stačí jméno, telefon a adresa.',
       how3t: 'Kurýr je u vás', how3: 'Do 45 minut. Když máme zavřeno, objednávku přijmeme na další den.',
-      placesLabel: 'Kontakt', placesTitle: 'Dvě kuchyně, <em>jeden rukopis</em>', yourCity: 'Vaše pobočka',
+      placesLabel: 'Kontakt', placesTitle: 'Dvě kuchyně, <em>jeden styl</em>', yourCity: 'Vaše pobočka',
       hours: 'Po–Ne {o}:00–{c}:00', route: 'Navigovat',
       allergTitle: 'Seznam alergenů · nařízení EU 1169/2011', allergNote: 'Alergeny v konkrétním jídle vám řekneme po telefonu.',
       footNote: 'Koncept redesignu SushiMax. Neoficiální web: objednávky se nikam neodesílají. Menu, ceny a fotografie ze sushimax.cz, říjen 2026.',
@@ -77,11 +79,13 @@
     },
     uk: {
       skip: 'Перейти до меню', navSets: 'Сети', navMenu: 'Меню', navDelivery: 'Доставка', navContact: 'Контакти',
-      heroTitle: 'Мистецтво суші <em>з доставкою додому</em>',
-      heroLead: 'Риба свіжа щодня, ніколи не заморожена. Роли готуємо лише після замовлення, по місту доставляємо безкоштовно.',
+      heroTitle: 'Суші, які <em>не треба чекати</em>',
+      heroLead: 'Свіжа риба щодня, ніколи не заморожена. Роли готуємо лише після замовлення.',
+      heroSub: 'Доставка по місту <b>0 Kč</b><br>Щодня 10–22',
+      ribbonA: ['Свіжі суші', '45 хвилин', 'Безкоштовна доставка', 'Ніколи не заморожені'], ribbonB: ['Колін', 'Їглава', 'Щодня 10–22'],
       heroCta: 'Замовити', fact1: 'хвилин до вас', fact2: 'доставка по місту', fact3: 'щодня',
       openTill: 'Відчинено до {t}', closedTill: 'Зачинено · відчиняємось {d} о {t}', today: 'сьогодні', tomorrow: 'завтра',
-      setsLabel: 'Сети', setsTitle: 'Сети на двох <em>і на цілу вечірку</em>',
+      setsLabel: 'Сети', setsTitle: 'Сети на двох <em>і на компанію</em>',
       setsLead: 'Біля кожного сету видно кількість шматочків, вагу та ціну за шматочок. Їх легко порівняти.',
       sealLabel: 'Сет тижня',
       lunchLabel: 'Обіди', lunchTitle: 'Обіднє меню <em>від 150&nbsp;Kč</em>', lunchLead: 'Гаряча їжа на обід з доставкою в офіс чи додому.',
@@ -91,7 +95,7 @@
       how1t: 'Оберіть філію', how1: 'Колін або Їглава. У кожної кухні своє меню та ціни.',
       how2t: 'Зберіть замовлення', how2: 'Без реєстрації. Потрібні лише ім’я, телефон і адреса.',
       how3t: 'Кур’єр у вас', how3: 'До 45 хвилин. Коли ми зачинені, приймемо замовлення на наступний день.',
-      placesLabel: 'Контакти', placesTitle: 'Дві кухні, <em>один почерк</em>', yourCity: 'Ваша філія',
+      placesLabel: 'Контакти', placesTitle: 'Дві кухні, <em>один стиль</em>', yourCity: 'Ваша філія',
       hours: 'Пн–Нд {o}:00–{c}:00', route: 'Маршрут',
       allergTitle: 'Список алергенів · регламент ЄС 1169/2011', allergNote: 'Алергени в конкретній страві підкажемо телефоном.',
       footNote: 'Концепт редизайну SushiMax. Неофіційний сайт: замовлення нікуди не надсилаються. Меню, ціни та фото з sushimax.cz, жовтень 2026.',
@@ -114,11 +118,13 @@
     },
     en: {
       skip: 'Skip to menu', navSets: 'Sets', navMenu: 'Menu', navDelivery: 'Delivery', navContact: 'Contact',
-      heroTitle: 'The art of sushi, <em>delivered home</em>',
-      heroLead: 'Fish is fresh every day, never frozen. We roll after you order and deliver free anywhere in town.',
+      heroTitle: 'Sushi you <em>don’t wait for</em>',
+      heroLead: 'Fresh fish every day, never frozen. We roll after you order.',
+      heroSub: 'Delivery in town <b>0 CZK</b><br>Daily 10–22',
+      ribbonA: ['Fresh sushi', '45 minutes', 'Free delivery', 'Never frozen'], ribbonB: ['Kolín', 'Jihlava', 'Daily 10–22'],
       heroCta: 'Order now', fact1: 'minutes to you', fact2: 'delivery in town', fact3: 'every day',
       openTill: 'Open until {t}', closedTill: 'Closed · we open {d} at {t}', today: 'today', tomorrow: 'tomorrow',
-      setsLabel: 'Sets', setsTitle: 'Sets for two <em>or the whole party</em>',
+      setsLabel: 'Sets', setsTitle: 'Sets for two <em>or the whole crew</em>',
       setsLead: 'Every set shows the piece count, weight and price per piece, so they are easy to compare.',
       sealLabel: 'Set of the week',
       lunchLabel: 'Lunch', lunchTitle: 'Lunch menu <em>from 150&nbsp;CZK</em>', lunchLead: 'A hot lunch delivered to your office or home.',
@@ -128,7 +134,7 @@
       how1t: 'Pick a kitchen', how1: 'Kolín or Jihlava. Each has its own menu and prices.',
       how2t: 'Build your order', how2: 'No sign-up. Just a name, phone and address.',
       how3t: 'The courier arrives', how3: 'Within 45 minutes. When we are closed, we take orders for the next day.',
-      placesLabel: 'Contact', placesTitle: 'Two kitchens, <em>one signature</em>', yourCity: 'Your kitchen',
+      placesLabel: 'Contact', placesTitle: 'Two kitchens, <em>one style</em>', yourCity: 'Your kitchen',
       hours: 'Mon–Sun {o}:00–{c}:00', route: 'Directions',
       allergTitle: 'Allergen list · EU regulation 1169/2011', allergNote: 'Ask us by phone about allergens in a specific dish.',
       footNote: 'SushiMax redesign concept. Unofficial site: no orders are sent anywhere. Menu, prices and photos from sushimax.cz, October 2026.',
@@ -256,17 +262,24 @@
   }
 
   function renderSeal() {
-    const i = findByName(SEAL); const el = $('#heroSeal');
-    if (!i) { el.hidden = true; return; }
-    el.hidden = false;
-    el.innerHTML = `<img src="${src(i.img)}" alt="" width="68" height="68"><span><small>${t('sealLabel')}</small><b>${esc(i.n)}</b><i>${i.k ? i.k + ' ' + t('pcs') + ' · ' : ''}${kc(i.p)}</i></span>`;
-    el.onclick = (e) => { e.preventDefault(); openProduct(i.id); };
+    const i = findByName(SEAL);
+    $('#heroCap').innerHTML = i ? `<i>${t('sealLabel')}</i> · <b>${esc(i.n)}</b> · ${meta(i)} · ${kc(i.p)}` : '';
+    $('#heroSet').onclick = () => i && openProduct(i.id);
+  }
+
+  // Running ribbons: the text is doubled so the loop (translateX -50%) is seamless.
+  function renderRibbons() {
+    for (const [id, key] of [['#ribbonA', 'ribbonA'], ['#ribbonB', 'ribbonB']]) {
+      const one = Array(4).fill(t(key)).flat().map((w) => `<span>${esc(w)}</span><span>✦</span>`).join('');
+      $(id).innerHTML = one + one;
+    }
   }
 
   function renderSets() {
     const sets = FEATURED.map(findByName).filter(Boolean);
-    $('#setsRow').innerHTML = sets.map((i) => `
+    $('#setsRow').innerHTML = sets.map((i, n) => `
       <article class="set">
+        <span class="set__num" aria-hidden="true">${String(n + 1).padStart(2, '0')}</span>
         <button class="set__pic" type="button" data-open="${i.id}" aria-label="${esc(i.n)}">
           <img src="${src(i.img)}" alt="" loading="lazy" width="800" height="600">${tags(i)}
         </button>
@@ -345,7 +358,7 @@
 
   function renderPlaces() {
     $('#places').innerHTML = Object.entries(CITIES).map(([id, c]) => `
-      <article class="place${id === S.city ? ' is-current' : ''}">
+      <article class="place${id === S.city ? ' is-current' : ''}" data-city="${c.name}">
         ${id === S.city ? `<span class="place__flag tag tag--hit">${t('yourCity')}</span>` : ''}
         <span class="label">SushiMax</span>
         <h3>${c.name}</h3>
@@ -500,7 +513,7 @@
 
   function setLang(l) {
     S.lang = l; store.set('lang', l);
-    applyTexts(); renderCity(); renderSeal(); renderSets(); renderLunch(); renderMenu(); renderPlaces(); renderRepeat(); renderCartButton();
+    applyTexts(); renderRibbons(); renderCity(); renderSeal(); renderSets(); renderLunch(); renderMenu(); renderPlaces(); renderRepeat(); renderCartButton();
     if ($('#cartDrawer').open) renderCart();
   }
 
@@ -537,7 +550,7 @@
   setInterval(() => { renderStatus(); }, 60000);
 
   // ---------- Start ----------
-  applyTexts();
+  applyTexts(); renderRibbons();
   if (S.city && CITIES[S.city]) setCity(S.city);
   else { setCity('kolin', false); $('#cityModal').showModal(); }
 })();

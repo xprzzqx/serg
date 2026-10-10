@@ -5,54 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SushiMax — разбор и редизайн</title>
 <meta name="description" content="Разбор сайта sushimax.cz и концепт редизайна: проблемы, решения, фирменный стиль.">
-<meta name="theme-color" content="#0A0909">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/sushimax.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/sushimax.css?v=5">
 <style>
   .doc { max-width: 980px; margin: 0 auto; padding: 0 32px; }
-  .doc-head { padding: 90px 0 60px; border-bottom: 1px solid var(--line); }
+  .doc-head { padding: 90px 0 60px; border-bottom: 1px solid var(--edge); }
   .doc-head .logo { width: 84px; height: 84px; margin-bottom: 30px; }
   .doc-head h1 { font-size: clamp(42px, 6vw, 72px); }
   .doc-head p { color: #C9BFB6; font-size: 19px; max-width: 36em; margin: 22px 0 0; }
   .doc-head .btn { margin-top: 32px; }
-  .part { padding: 72px 0; border-bottom: 1px solid var(--line); }
+  .part { padding: 72px 0; border-bottom: 1px solid var(--edge); }
   .part h2 { margin: 16px 0 26px; }
   .part h3 { font-size: 26px; margin: 34px 0 10px; }
   .part p, .part li { color: #D6CCC3; }
   .part ul, .part ol { padding-left: 22px; }
   .part li { margin: 6px 0; }
-  .part li::marker { color: var(--red-ink); }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 10px 0 8px; border: 1px solid var(--line); }
-  .kpis div { padding: 22px; border-left: 1px solid var(--line); }
+  .part li::marker { color: var(--red); }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 10px 0 8px; border: 1px solid var(--edge); }
+  .kpis div { padding: 22px; border-left: 1px solid var(--edge); }
   .kpis div:first-child { border-left: 0; }
-  .kpis b { display: block; font: 500 38px/1 var(--serif); font-variant-numeric: lining-nums; }
+  .kpis b { display: block; font: 700 46px/1 var(--display); color: var(--red); }
   .kpis span { display: block; margin-top: 8px; font-size: 13px; color: var(--muted); }
   table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
-  th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--edge); }
   th { font: 600 11px/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
   td { color: #D6CCC3; }
   td b { color: var(--text); }
-  .shot { margin: 22px 0; border: 1px solid var(--line-2); }
-  .shot figcaption { padding: 10px 14px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); }
+  .shot { margin: 22px 0; border: 1px solid var(--edge-2); }
+  .shot figcaption { padding: 10px 14px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--edge); }
   .shots-2 { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; align-items: start; }
-  .issue { padding: 26px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 54px 1fr; gap: 10px 18px; }
+  .issue { padding: 26px 0; border-top: 1px solid var(--edge); display: grid; grid-template-columns: 54px 1fr; gap: 10px 18px; }
   .issue:first-of-type { border-top: 0; }
-  .issue > b { font: italic 400 34px/1 var(--serif); color: var(--red-ink); }
+  .issue > b { font: 700 54px/.9 var(--display); color: transparent; -webkit-text-stroke: 1.5px var(--red); }
   .issue h3 { margin: 0 0 8px !important; }
   .issue p { margin: 0; }
   .issue .fix { margin-top: 10px; padding-left: 14px; border-left: 2px solid var(--red); color: var(--text); }
   .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
-  .sw { border: 1px solid var(--line-2); }
+  .sw { border: 1px solid var(--edge-2); }
   .sw i { display: block; height: 90px; }
   .sw span { display: block; padding: 10px 12px; font-size: 13px; color: var(--muted); }
   .sw span b { display: block; color: var(--text); font-weight: 600; }
   .type { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  .type div { padding: 24px; border: 1px solid var(--line); }
-  .type .a { font: 500 46px/1.05 var(--serif); }
-  .type .a em { color: var(--red-ink); font-weight: 400; }
+  .type > div { padding: 24px; border: 1px solid var(--edge); }
+  .type .a { font: 700 50px/1.15 var(--display); text-transform: uppercase; }
+  .type .a em { color: var(--red); font-style: normal; }
   .type .b { font: 500 18px/1.5 var(--sans); }
   .type small { display: block; margin-top: 14px; color: var(--muted); font: 600 11px var(--sans); letter-spacing: .16em; text-transform: uppercase; }
   .ask li b { color: var(--text); }
@@ -60,7 +60,7 @@
     .doc { padding: 0 18px; }
     .kpis { grid-template-columns: 1fr 1fr; }
     .kpis div:nth-child(3) { border-left: 0; }
-    .kpis div:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .kpis div:nth-child(n+3) { border-top: 1px solid var(--edge); }
     .shots-2, .type { grid-template-columns: 1fr; }
     .swatches { grid-template-columns: repeat(2, 1fr); }
     table { font-size: 14px; }
@@ -165,18 +165,18 @@
 
 <section class="part">
   <span class="label"><b>04</b> Стиль</span>
-  <h2>Престиж <em>в чёрном и красном</em></h2>
-  <p>Тёмная гамма с красным осталась, как и сейчас, но стала спокойнее и дороже. Сделано так: глубокий чёрный фон, один красный из логотипа, тонкие линии вместо рамок и теней, антиква с курсивом в заголовках, много воздуха. Фото блюд сняты на тёмном фоне, поэтому на чёрном сайте сливаются с ним и выглядят как в журнале.</p>
+  <h2>Noir Cinema: <em>ночной Токио</em></h2>
+  <p>Чёрный и красный, как у бренда сейчас, но с характером кино: чисто чёрный фон, красный работает как свет (свечение, неоновая линия, подсветка при наведении), огромные контурные буквы SUSHIMAX, узкий высокий шрифт в верхнем регистре, бегущие ленты «45 minut ✦ doprava zdarma». Фото Йиглавы сняты на чисто чёрном фоне, поэтому сет на первом экране «висит» прямо в воздухе, без рамки. Сеты показаны как витрина с крупными номерами 01, 02, 03.</p>
   <div class="swatches">
-    <div class="sw"><i style="background:#0A0909"></i><span><b>Нори</b>#0A0909 фон</span></div>
-    <div class="sw"><i style="background:#151212"></i><span><b>Уголь</b>#151212 карточки</span></div>
-    <div class="sw"><i style="background:#B8261C"></i><span><b>Красный Max</b>#B8261C кнопки</span></div>
-    <div class="sw"><i style="background:#3A0D09"></i><span><b>Вино</b>#3A0D09 акцентные блоки</span></div>
+    <div class="sw"><i style="background:#000"></i><span><b>Ночь</b>#000000 фон</span></div>
+    <div class="sw"><i style="background:#0C0B0B"></i><span><b>Уголь</b>#0C0B0B карточки</span></div>
+    <div class="sw"><i style="background:#E0301E;box-shadow:0 0 24px rgba(224,48,30,.6)"></i><span><b>Неон Max</b>#E0301E кнопки, цены, свечение</span></div>
+    <div class="sw"><i style="background:#8E1A10"></i><span><b>Кирпич</b>#8E1A10 из логотипа</span></div>
     <div class="sw"><i style="background:#F4EEE8"></i><span><b>Рис</b>#F4EEE8 текст</span></div>
   </div>
   <h3>Шрифты</h3>
   <div class="type">
-    <div><div class="a">Umění sushi <em>doručené</em></div><small>Playfair Display · заголовки и цены</small></div>
+    <div><div class="a">Sushi, na které <em>nečekáte</em></div><small>Oswald · заголовки, цены, кнопки</small></div>
     <div><div class="b">Ryba je čerstvá každý den, nikdy mražená. Риба свіжа щодня.</div><small>Onest · текст и интерфейс</small></div>
   </div>
   <p>Оба шрифта бесплатные (Google Fonts) и поддерживают чешскую диакритику и украинскую кириллицу.</p>
@@ -188,7 +188,7 @@
   <div class="tbl"><table>
     <tr><th>Было</th><th>Стало</th></tr>
     <tr><td>Город выбирается кнопкой на главной или в меню</td><td><b>При первом заходе</b> спрашиваем город и запоминаем его. Меню, цены, телефон и адрес подставляются сами</td></tr>
-    <tr><td>Слоган и пустой первый экран</td><td><b>Статус «открыто до 22:00»</b>, предложение, кнопки «Заказать» и «Позвонить», 45 мин / 0 Kč / 10–22, сет недели</td></tr>
+    <tr><td>Слоган и пустой первый экран</td><td><b>Сет недели в центре экрана</b> на фоне огромных букв SUSHIMAX, статус «открыто до 22:00», «45 min», доставка 0 Kč, кнопки «Заказать» и «Позвонить», бегущие ленты с главным</td></tr>
     <tr><td>Сеты — одна из 18 категорий</td><td><b>Блок сетов</b> сразу под первым экраном: штуки, вес, количество видов роллов, <b>цена за штуку</b></td></tr>
     <tr><td>Нет</td><td><b>Метки «Хит» и «Новинка».</b> Новинки определяются автоматически по дате загрузки фото в Poster. Хиты сейчас для примера, нужен настоящий список от владельца</td></tr>
     <tr><td>Обеды Йиглавы спрятаны в категории «Obéd»</td><td><b>Отдельный блок «Обеденное меню от 150 Kč»</b>, виден только для Йиглавы</td></tr>

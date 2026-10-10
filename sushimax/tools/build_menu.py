@@ -118,6 +118,12 @@ def parse(p, cat):
         rolls = [fix_text(l) for l in lines if not SIDES.search(l)]
         item["r"] = [r[0].upper() + r[1:] for r in rolls]
     else:
+        # Standalone "250g" / "8ks" lines may sit anywhere; "losos..." is a leftover draft line.
+        for l in lines:
+            m = re.fullmatch(r"(\d+)\s*(g|ks|kd)\.?", l, re.I)  # "8kd" is a typo of "8ks"
+            if m and m.group(2).lower() != "g": pcs = pcs or int(m.group(1))
+            elif m and not w: w = m.group(1) + "g"
+        lines = [l for l in lines if not re.fullmatch(r"\d+\s*(g|ks|kd)\.?", l, re.I) and not l.endswith("...")]
         d = fix_text(", ".join(lines))  # Poster often has one ingredient per line
         # trailing "250g 8ks", ", porce, 121g" etc.
         while True:
@@ -126,7 +132,7 @@ def parse(p, cat):
             if m.group(2) and m.group(2).lower() == "ks": pcs = int(m.group(1))
             elif m.group(2) and not w: w = m.group(1) + "g"
             d = d[:m.start()]
-        d = re.sub(r"\s*\d+\s*porce$", "", d)
+        d = re.sub(r"\s*\d+\s*porce$", "", d).rstrip(" .,")
         if d and d.lower() != item["n"].lower(): item["d"] = d[0].upper() + d[1:]
     if w and re.fullmatch(r"\d+g", w): item["w"] = int(w[:-1])
     if pcs: item["k"] = pcs
