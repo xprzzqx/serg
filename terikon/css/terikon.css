@@ -479,3 +479,8 @@ body.no-scroll { overflow: hidden; }
 .track li.now::before { background: var(--sodium); box-shadow: 0 0 0 5px rgba(255, 138, 30, .25); }
 .track b { font-size: 17px; }
 .track span { color: var(--mute); font-family: var(--font-mono); font-size: 13px; }
+
+.filters__actions { display: grid; gap: 12px; justify-items: start; position: sticky; bottom: 0; padding: 12px 0; background: var(--concrete); }
+.filters__actions .btn { width: 100%; }
+.filters__actions .btn:disabled { opacity: .5; cursor: not-allowed; }
+.empty[hidden], .grid[hidden] { display: none !important; }

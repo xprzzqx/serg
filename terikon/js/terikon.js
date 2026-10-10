@@ -205,10 +205,20 @@
         if (ok) shown++;
       });
       countEl.textContent = 'Показано ' + shown + ' з ' + cards.length;
+      var word = shown === 1 ? 'річ' : (shown >= 2 && shown <= 4) ? 'речі' : 'речей';
+      var show = filters.querySelector('[data-filter-show]');
+      show.textContent = shown ? 'Показати ' + shown + ' ' + word : 'Нічого не знайшлось';
+      show.disabled = !shown;
       emptyEl.hidden = shown > 0;
       catalog.hidden = shown === 0;
     };
     filters.addEventListener('change', apply);
+    filters.querySelector('[data-filter-show]').addEventListener('click', function () {
+      apply();
+      var top = document.querySelector('.toolbar').getBoundingClientRect().top + window.scrollY - 16;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      var first = catalog.querySelector('.card:not([hidden])'); if (first) first.focus({ preventScroll: true });
+    });
     filters.querySelector('[data-size-filter]').addEventListener('pick', apply);
     document.querySelectorAll('[data-filter-reset]').forEach(function (b) {
       b.addEventListener('click', function () {

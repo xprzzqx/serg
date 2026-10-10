@@ -84,7 +84,10 @@
         <label class="check"><span><input type="checkbox" name="color" value="beige"> Бежевий</span><small>1</small></label>
       </fieldset>
       <label class="toggle">Тільки в наявності <input type="checkbox" name="instock"></label>
-      <button class="btn btn--dark" type="button" data-filter-reset>Скинути фільтри</button>
+      <div class="filters__actions">
+        <button class="btn btn--dark" type="button" data-filter-show>Показати 9 речей</button>
+        <button class="link-btn" type="button" data-filter-reset>Скинути фільтри</button>
+      </div>
     </form>
 
     <div>
@@ -110,7 +113,7 @@
           </div>
         </a>
         <a class="card" href="product.html" data-cat="jacket" data-sizes="M L XL" data-color="black" data-instock="1">
-          <div class="card__media"><img src="img/bomber.svg" alt="Бомбер утеплений, графітовий"><img class="card__alt" src="img/m-bomber.webp" alt="" loading="lazy"><span class="label card__tag card__tag--hot">Закінчується</span></div>
+          <div class="card__media card__media--photo"><img src="img/p-bomber.webp" alt="Бомбер утеплений, графітовий"><img class="card__alt" src="img/m-bomber.webp" alt="" loading="lazy"><span class="label card__tag card__tag--hot">Закінчується</span></div>
           <div class="card__body">
             <div class="card__top"><h3 class="card__name">Бомбер утеплений</h3><span class="card__price">4 200 ₴</span></div>
             <p class="card__sub">Графітовий · помаранчевий кант</p>
